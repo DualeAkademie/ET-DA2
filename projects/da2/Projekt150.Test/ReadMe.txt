@@ -3,14 +3,14 @@
 https://www.cryptool.org/de/cto/caesar
 
 
-public static (bool valid, string encoded) CaesarEncode(string? klarText, int schluessel)
+public static bool TryCaesarEncode(string? klarText, int schluessel, out string encode)
 {
-    return (false, "");
+    return (false);
 }
 
 
-klarText: Gross- und Kleinbuchstaben (keine Sonderzeichen wie äöüß, ...) sowie Leerzeichen
+klarText: Gross- und Kleinbuchstaben (a-z; A-Z) sowie Leerzeichen und Satzzeichen (.-,)
 schluessel: Anzahl der Zeichen um die die Ausgabe verschoben wird (0 .. )
-Verschlüsselt: Nur Grossbuchstaben sowie Leerzeichen
+Verschlüsselt: Grossbuchstaben sowie sowie Leerzeichen und Satzzeichen
 
 Unglültige Eingaben erzeugen eine leere Ausgabe
