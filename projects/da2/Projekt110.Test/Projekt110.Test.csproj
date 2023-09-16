@@ -1,10 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,19 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="lib\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Projekt150">
-      <HintPath>lib\Projekt150.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="lib\Projekt150.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\Projekt110\Projekt110.csproj" />
   </ItemGroup>
 
 </Project>
