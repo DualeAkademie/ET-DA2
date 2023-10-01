@@ -6,7 +6,7 @@ namespace Projekt201.ViewModel;
 public partial class VmProjekt
 {
     [RelayCommand]
-    private void ButtonTaster(string taster)
+    private void ButtonTaster(string? taster)
     {
 
 

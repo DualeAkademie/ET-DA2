@@ -2,7 +2,7 @@ namespace Projekt102;
 
 public static class GrundrechenartenByte
 {
-    public static byte Addieren(byte summand1, byte summband2)
+    public static byte Addieren(byte summand1, byte summand2)
     {
         return 0;
     }

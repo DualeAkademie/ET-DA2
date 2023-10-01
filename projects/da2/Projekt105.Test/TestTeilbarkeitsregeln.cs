@@ -3,7 +3,7 @@ namespace Projekt105.Test;
 public class TestTeilbarkeitsregeln
 {
     [Theory]
-    [InlineData(false, 0)]
+    [InlineData(true, 0)]
     [InlineData(false, 1)]
     [InlineData(true, 2)]
     [InlineData(false, 3)]
@@ -20,7 +20,7 @@ public class TestTeilbarkeitsregeln
 
 
     [Theory]
-    [InlineData(false, 0)]
+    [InlineData(true, 0)]
     [InlineData(false, 1)]
     [InlineData(false, 2)]
     [InlineData(true, 3)]
@@ -38,7 +38,7 @@ public class TestTeilbarkeitsregeln
     }
 
     [Theory]
-    [InlineData(false, 0)]
+    [InlineData(true, 0)]
     [InlineData(false, 1)]
     [InlineData(false, 2)]
     [InlineData(false, 3)]
@@ -58,7 +58,7 @@ public class TestTeilbarkeitsregeln
     }
 
     [Theory]
-    [InlineData(false, 0)]
+    [InlineData(true, 0)]
     [InlineData(false, 1)]
     [InlineData(false, 2)]
     [InlineData(false, 3)]

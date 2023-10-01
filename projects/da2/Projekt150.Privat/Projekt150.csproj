@@ -8,8 +8,4 @@
     <AssemblyName>Projekt150</AssemblyName>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy bin\Release\net6.0 ..\Projekt150.Test\lib  /h /i /c /k /e /r /y" />
-  </Target>
-
 </Project>

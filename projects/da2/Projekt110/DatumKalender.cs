@@ -11,12 +11,6 @@ public class DatumKalender
     {
         return 0;
     }
-
-    public static int LastDayOfMonth(int year, int month)
-    {
-        return 0;
-    }
-
     public static bool IsLeapYear(int year)
     {
         return false;
