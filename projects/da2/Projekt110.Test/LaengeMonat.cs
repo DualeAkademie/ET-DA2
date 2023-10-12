@@ -23,7 +23,36 @@ public class LaengeMonat
     [InlineData(29, 2016, 2)]
     [InlineData(29, 2020, 2)]
 
-    public void LaengeMonatOhneAbfrage(int exp, int jahr, int monat)
+    public void LaengeMonatMitAbfrage(int exp, int jahr, int monat)
+    {
+        var laenge = DatumKalender.LastDayOfMonth(jahr, monat);
+        Assert.Equal(exp, laenge);
+    }
+
+
+
+    [Theory]
+    [InlineData(31, 2023, DatumKalender.Monate.Januar)]
+    [InlineData(28, 2023, DatumKalender.Monate.Februar)]
+    [InlineData(31, 2023, DatumKalender.Monate.März)]
+    [InlineData(30, 2023, DatumKalender.Monate.April)]
+    [InlineData(31, 2023, DatumKalender.Monate.Mai)]
+    [InlineData(30, 2023, DatumKalender.Monate.Juni)]
+    [InlineData(31, 2023, DatumKalender.Monate.Juli)]
+    [InlineData(31, 2023, DatumKalender.Monate.August)]
+    [InlineData(30, 2023, DatumKalender.Monate.September)]
+    [InlineData(31, 2023, DatumKalender.Monate.Oktober)]
+    [InlineData(30, 2023, DatumKalender.Monate.November)]
+    [InlineData(31, 2023, DatumKalender.Monate.Dezember)]
+
+    [InlineData(28, 1800, DatumKalender.Monate.Februar)]
+    [InlineData(28, 1900, DatumKalender.Monate.Februar)]
+    [InlineData(28, 2100, DatumKalender.Monate.Februar)]
+    [InlineData(29, 2012, DatumKalender.Monate.Februar)]
+    [InlineData(29, 2016, DatumKalender.Monate.Februar)]
+    [InlineData(29, 2020, DatumKalender.Monate.Februar)]
+
+    public void LaengeMonatOhneAbfrage(int exp, int jahr, DatumKalender.Monate monat)
     {
         var laenge = DatumKalender.DaysInMonth(jahr, monat);
         Assert.Equal(exp, laenge);

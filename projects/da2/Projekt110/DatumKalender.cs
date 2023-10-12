@@ -6,11 +6,32 @@ public class DatumKalender
     //https://www.cppnow.org
     //https://www.youtube.com/watch?v=0s9F4QWAl-E
 
+    public enum Monate
+    {
+        Januar = 1,
+        Februar,
+        März,
+        April,
+        Mai,
+        Juni,
+        Juli,
+        August,
+        September,
+        Oktober,
+        November,
+        Dezember
+    }
 
-    public static int DaysInMonth(int year, int month)
+    public static int DaysInMonth(int year, Monate monat)
     {
         return 0;
     }
+
+    public static int LastDayOfMonth(int year, int month)
+    {
+        return 0;
+    }
+
     public static bool IsLeapYear(int year)
     {
         return false;
