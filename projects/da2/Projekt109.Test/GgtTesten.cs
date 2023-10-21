@@ -1,6 +1,6 @@
 namespace Projekt109.Test;
 
-public class Teilbarkeit
+public class GgtTesten
 {
     [Fact]
     public void Test1()

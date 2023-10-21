@@ -3,7 +3,56 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Projekt510.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid />
+        d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
+        Title="Dezimal → Binär und Hexadezimal" Height="650" Width="940">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition/>
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="1" Grid.Row="1"  Content="Dezimal" FontSize="12pt"/>
+        <TextBox Grid.Column="3" Grid.Row="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="{Binding Path=StringDezimaleZahl, UpdateSourceTrigger=PropertyChanged}" Background="#FFcccccc" FontSize="12pt"/>
+
+        <Label Grid.Column="1" Grid.Row="3"   Content="Länge"  FontSize="12pt"/>
+        <ComboBox x:Name="AnzahlByte" Grid.Column="3"  Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="30" SelectedItem="0" SelectedIndex="0" SelectionChanged="AnzahlByte_SelectionChanged"  FontSize="12pt">
+            <ComboBoxItem>1 Byte</ComboBoxItem>
+            <ComboBoxItem>2 Byte</ComboBoxItem>
+            <ComboBoxItem>3 Byte</ComboBoxItem>
+            <ComboBoxItem>4 Byte</ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Column="3" Grid.Row="5"  Content="Binär" VerticalAlignment="Bottom" Background="LightGreen" Height="30"  FontSize="12pt"/>
+        <Label Grid.Column="3"  Grid.Row="7"   Content="{Binding StringBinaer}" Background="LightGreen"  FontSize="12pt"/>
+        <DataGrid x:Name="DataGridHornerBin"  Grid.Column="3" Grid.Row="11" ItemsSource="{Binding HornerSchemaBin}"  FontSize="12pt"/>
+
+        <Label Grid.Column="5" Grid.Row="5"   Content="Hexadezimal" VerticalAlignment="Center" Height="30" Background="LightYellow"  FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="7"   Content="{Binding StringHexadezimalPlc}" Background="LightYellow"  FontSize="12pt"/>
+        <Label Grid.Column="5" Grid.Row="9"   Content="{Binding StringHexadezimalC}"  Background="LightYellow"  FontSize="12pt"/>
+        <DataGrid x:Name="DataGridHornerHex"  Grid.Column="5" Grid.Row="11"  ItemsSource="{Binding HornerSchemaHex}"  FontSize="12pt"/>
+    </Grid>
 </Window>
