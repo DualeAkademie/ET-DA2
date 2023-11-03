@@ -49,7 +49,7 @@ public class HornerHexTesten
 
     public void DezimalToHexTesten(Testfaelle testFall, int anzahlEintraege, int dezimal, int anzahlByte)
     {
-        var (_, horner) = Umrechnungen.DezimalToHexadezimal(dezimal, anzahlByte, Umrechnungen.HexadezimalStil.Plc);
+        var (_, horner) = Umrechnungen.DezimalToHexadezimal(dezimal, anzahlByte, Umrechnungen.Zahlensystem.HexadezimalC);
 
         for (var i = 0; i < anzahlEintraege; i++)
         {

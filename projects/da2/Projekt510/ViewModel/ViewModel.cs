@@ -22,9 +22,10 @@ public partial class ViewModel : ObservableObject
 
         HornerSchemaBin = new ObservableCollection<HornerSchema>();
         HornerSchemaHex = new ObservableCollection<HornerSchema>();
-        
+
         StringDezimaleZahl = "";
-        StringBinaer = "";
+        StringBinaerC = "";
+        StringBinaerPlc = "";
         StringHexadezimalC = "";
         StringHexadezimalPlc = "";
 
@@ -61,7 +62,6 @@ public partial class ViewModel : ObservableObject
                               breiteHex = true;
                           });
             }
-
         }
     }
 }

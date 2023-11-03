@@ -11,7 +11,7 @@ public class BuchstabenLesenTesten
     [InlineData(true, 'a', "abcdefghijklmnopqrst", 0)]
     [InlineData(true, 'b', "abcdefghijklmnopqrst", 1)]
 
-    public void BuchstabenLesenTest(bool expErgebnis , char expZeichen, string text, int position)
+    public void BuchstabenLesenTest(bool expErgebnis, char expZeichen, string text, int position)
     {
         var ergebnis = BuchstabenFunktionen.EinBuchstabeLesen(text, position, out var zeichen);
 

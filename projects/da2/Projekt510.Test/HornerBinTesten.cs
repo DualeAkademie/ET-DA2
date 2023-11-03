@@ -4,15 +4,15 @@ namespace Projekt510.Test;
 
 public class HornerBinTesten
 {
-  public  enum Testfaelle
+    public enum Testfaelle
     {
         Test0,
         Test1,
-        Test5=3,
-        Test13=7,
-        Test42=12
+        Test5 = 3,
+        Test13 = 7,
+        Test42 = 12
     }
-    
+
     private readonly List<HornerSchema> _testergebnisse = new()
     {
         new HornerSchema("", 0, ""),    // Test0
@@ -40,9 +40,9 @@ public class HornerBinTesten
         new HornerSchema("6", 0, "1")
     };
 
- 
+
     [Theory]
-    [InlineData(Testfaelle.Test0,1, 0, 0)]
+    [InlineData(Testfaelle.Test0, 1, 0, 0)]
     [InlineData(Testfaelle.Test1, 2, 1, 1)]
     [InlineData(Testfaelle.Test5, 4, 5, 1)]
     [InlineData(Testfaelle.Test13, 5, 13, 1)]
@@ -50,13 +50,13 @@ public class HornerBinTesten
 
     public void DezimalToBinTesten(Testfaelle testFall, int anzahlEintraege, int dezimal, int anzahlByte)
     {
-        var (_, horner) = Umrechnungen.DezimalToBinaer(dezimal, anzahlByte);
-        
+        var (_, horner) = Umrechnungen.DezimalToBinaer(dezimal, anzahlByte, Umrechnungen.Zahlensystem.BinaerC);
+
         for (var i = 0; i < anzahlEintraege; i++)
         {
             Assert.Equal(_testergebnisse[(int) testFall + i].Schritt, horner[i].Schritt);
             Assert.Equal(_testergebnisse[(int) testFall + i].DezimaleZahl, horner[i].DezimaleZahl);
-            Assert.Equal(_testergebnisse[(int)testFall + i].Rest, horner[i].Rest);
+            Assert.Equal(_testergebnisse[(int) testFall + i].Rest, horner[i].Rest);
         }
     }
 }

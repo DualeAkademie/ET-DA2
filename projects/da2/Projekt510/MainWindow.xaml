@@ -47,7 +47,8 @@
         </ComboBox>
 
         <Label Grid.Column="3" Grid.Row="5"  Content="Binär" VerticalAlignment="Bottom" Background="LightGreen" Height="30"  FontSize="12pt"/>
-        <Label Grid.Column="3"  Grid.Row="7"   Content="{Binding StringBinaer}" Background="LightGreen"  FontSize="12pt"/>
+        <Label Grid.Column="3"  Grid.Row="7"   Content="{Binding StringBinaerPlc}" Background="LightGreen"  FontSize="12pt"/>
+        <Label Grid.Column="3"  Grid.Row="9"   Content="{Binding StringBinaerC}" Background="LightGreen"  FontSize="12pt"/>
         <DataGrid x:Name="DataGridHornerBin"  Grid.Column="3" Grid.Row="11" ItemsSource="{Binding HornerSchemaBin}"  FontSize="12pt"/>
 
         <Label Grid.Column="5" Grid.Row="5"   Content="Hexadezimal" VerticalAlignment="Center" Height="30" Background="LightYellow"  FontSize="12pt" />

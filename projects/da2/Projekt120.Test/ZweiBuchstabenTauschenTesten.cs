@@ -9,7 +9,7 @@ public class ZweiBuchstabenTauschenTesten
     [InlineData(false, " ", " ", 1, 0)]
     [InlineData(false, " ", " ", 0, 1)]
 
-    [InlineData(true,"bacdefghijklmnopqrst", "abcdefghijklmnopqrst", 0, 1)]
+    [InlineData(true, "bacdefghijklmnopqrst", "abcdefghijklmnopqrst", 0, 1)]
     [InlineData(true, "abfdecghijklmnopqrst", "abcdefghijklmnopqrst", 5, 2)]
 
 

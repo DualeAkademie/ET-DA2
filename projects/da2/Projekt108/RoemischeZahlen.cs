@@ -19,10 +19,12 @@ public class RoemischeZahlen
 
     public static uint RoemischInDezimalUmrechnen(string? roemisch)
     {
+        _ = roemisch;
         return 0;
     }
     public static string DezimalInRoemischUmrechnen(uint dezimal)
     {
+        _ = dezimal;
         return "?";
     }
 }

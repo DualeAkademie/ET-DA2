@@ -12,15 +12,15 @@ public partial class MainWindow
     public MainWindow()
     {
         CancellationTokenSource = new CancellationTokenSource();
-        
+
 
         _viewModel = new ViewModel.ViewModel(this, CancellationTokenSource);
 
         InitializeComponent();
         DataContext = _viewModel;
 
-      //  DataGridHornerBin.Columns[0].Width = 200;
-      //  DataGridHornerBin.Columns[1].Width = 200;
+        //  DataGridHornerBin.Columns[0].Width = 200;
+        //  DataGridHornerBin.Columns[1].Width = 200;
         //DataGridHornerHex.DataContext = _viewModel.HornerSchemaHex;
     }
 

@@ -4,6 +4,7 @@ public class Palindrom
     // Es werden Groß- bzw. Kleinschreibung sowie Leerzeichen und Satzzeichen ignoriert
     public static bool IstEinPalindrom(string? text)
     {
+        _ = text;
         return true;
     }
 }

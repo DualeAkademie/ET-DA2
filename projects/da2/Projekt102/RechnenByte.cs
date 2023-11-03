@@ -13,6 +13,10 @@ public class RechnenByte
 
     public static byte RechenFunkionen(byte a, byte b, RechenOpenerationen operation)
     {
+        _ = a;
+        _ = b;
+        _ = operation;
+
         return 0;
     }
 }

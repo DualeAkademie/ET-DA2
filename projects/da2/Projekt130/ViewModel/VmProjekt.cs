@@ -9,7 +9,7 @@ namespace Projekt130.ViewModel;
 public partial class VmProjekt : ObservableObject
 {
     private readonly ModelProjekt _modelProjekt;
-    
+
     public VmProjekt(ModelProjekt modelProjekt, CancellationTokenSource cancellationTokenSource)
     {
         _modelProjekt = modelProjekt;

@@ -13,7 +13,7 @@ public class ModelProjekt
     public ModelProjekt(CancellationTokenSource cancellationTokenSource)
     {
 
-        
+
         _ = Task.Run(() => ModelTask(cancellationTokenSource.Token));
     }
 

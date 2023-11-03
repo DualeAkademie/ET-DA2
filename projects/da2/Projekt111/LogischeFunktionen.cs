@@ -12,6 +12,9 @@ public class LogischeFunktionen
 
     public static uint Funktionen(uint a, uint b, LogischeOperationen operation)
     {
+        _ = a;
+        _ = b;
+        _ = operation;
         return 0;
     }
 }

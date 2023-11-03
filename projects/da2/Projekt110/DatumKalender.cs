@@ -24,16 +24,21 @@ public class DatumKalender
 
     public static int DaysInMonth(int year, Monate monat)
     {
+        _ = year;
+        _ = monat;
         return 0;
     }
 
     public static int LastDayOfMonth(int year, int month)
     {
+        _ = year;
+        _ = month;
         return 0;
     }
 
     public static bool IsLeapYear(int year)
     {
+        _ = year;
         return false;
     }
 }
