@@ -6,7 +6,7 @@
         xmlns:viewModel="clr-namespace:Projekt510.ViewModel"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
-        Title="Dezimal → Binär und Hexadezimal" Height="650" Width="940">
+        Title="Projekt 510: Dezimal → Binär und Hexadezimal" Height="650" Width="940">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10" />

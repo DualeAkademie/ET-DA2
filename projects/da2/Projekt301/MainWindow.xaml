@@ -6,27 +6,27 @@
         xmlns:viewModel1="clr-namespace:Projekt301.ViewModel"
         d:DataContext="{d:DesignInstance Type=viewModel1:VmProjekt}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Projekt 301" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
             <ColumnDefinition/>
-            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="10" />
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="10"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
             <RowDefinition/>
-            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="10" />
         </Grid.RowDefinitions>
 
         <Button Grid.Column="3" Grid.Row="1" Content="-" Background="Red"       FontSize="20pt" CommandParameter="-" Command="{Binding ButtonTasterCommand}" ClickMode="{Binding ClickModeMinus}"  />

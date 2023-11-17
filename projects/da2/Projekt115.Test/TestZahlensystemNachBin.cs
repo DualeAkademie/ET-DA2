@@ -3,6 +3,7 @@ namespace Projekt115.Test;
 public class TestZahlensystemNachBin
 {
     [Theory]
+    [InlineData("0b0000", null, ZahlenKonvertieren.Zahlensystem.BinaerC)]
     [InlineData("0b0000", "2#0", ZahlenKonvertieren.Zahlensystem.BinaerC)]
     [InlineData("2#0000", "0b0", ZahlenKonvertieren.Zahlensystem.BinaerPlc)]
     [InlineData("0b0001", "2#1", ZahlenKonvertieren.Zahlensystem.BinaerC)]
@@ -10,7 +11,7 @@ public class TestZahlensystemNachBin
     [InlineData("2#0001_0000", "2#0001_0000", ZahlenKonvertieren.Zahlensystem.BinaerPlc)]
     [InlineData("0b1100_1000", "0b1100_1000", ZahlenKonvertieren.Zahlensystem.BinaerC)]
 
-    public void TestBinaereZahlenKonvertieren(string exp, string zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
+    public void TestBinaereZahlenKonvertieren(string exp, string? zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
     {
         var zahlBin = ZahlenKonvertieren.ZahlensystemKonvertieren(zahl, zahlensystem);
 
@@ -20,6 +21,7 @@ public class TestZahlensystemNachBin
 
 
     [Theory]
+    [InlineData("0b0000", null, ZahlenKonvertieren.Zahlensystem.BinaerC)]
     [InlineData("0b0000", "16#0", ZahlenKonvertieren.Zahlensystem.BinaerC)]
     [InlineData("2#0000", "0x0", ZahlenKonvertieren.Zahlensystem.BinaerPlc)]
     [InlineData("0b0001", "16#1", ZahlenKonvertieren.Zahlensystem.BinaerC)]
@@ -28,7 +30,7 @@ public class TestZahlensystemNachBin
     [InlineData("0b1100_1000", "0xC8", ZahlenKonvertieren.Zahlensystem.BinaerC)]
     [InlineData("2#0001_1110_0010_0100_0000", "16#1E240", ZahlenKonvertieren.Zahlensystem.BinaerPlc)]
 
-    public void TestHexadezimaleZahlenKonvertieren(string exp, string zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
+    public void TestHexadezimaleZahlenKonvertieren(string exp, string? zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
     {
         var zahlBin = ZahlenKonvertieren.ZahlensystemKonvertieren(zahl, zahlensystem);
 
@@ -37,6 +39,7 @@ public class TestZahlensystemNachBin
 
 
     [Theory]
+    [InlineData("0b0000", null, ZahlenKonvertieren.Zahlensystem.BinaerC)]
     [InlineData("0b0000", "0", ZahlenKonvertieren.Zahlensystem.BinaerC)]
     [InlineData("2#0000", "0", ZahlenKonvertieren.Zahlensystem.BinaerPlc)]
     [InlineData("0b0001", "1", ZahlenKonvertieren.Zahlensystem.BinaerC)]
@@ -46,7 +49,7 @@ public class TestZahlensystemNachBin
     [InlineData("0b1100_1000", "200", ZahlenKonvertieren.Zahlensystem.BinaerC)]
     [InlineData("2#0001_1110_0010_0100_0000", "123456", ZahlenKonvertieren.Zahlensystem.BinaerPlc)]
 
-    public void TestDezimaleZahlenKonvertieren(string exp, string zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
+    public void TestDezimaleZahlenKonvertieren(string exp, string? zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
     {
         var zahlBin = ZahlenKonvertieren.ZahlensystemKonvertieren(zahl, zahlensystem);
 

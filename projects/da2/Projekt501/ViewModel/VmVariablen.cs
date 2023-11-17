@@ -5,5 +5,5 @@ namespace Projekt501.ViewModel;
 
 public partial class VmProjekt
 {
-    [ObservableProperty] private ObservableCollection<Daten.Data> _dataGridZeilen = new();
+    [ObservableProperty] private ObservableCollection<Daten.Data> _dataGridZeilen = [];
 }

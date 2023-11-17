@@ -2,7 +2,7 @@ namespace Projekt113.Test;
 public class FakultaetTesten
 {
     [Theory]
-    [InlineData(0, 0)]
+    [InlineData(1, 0)]
     [InlineData(1, 1)]
     [InlineData(2, 2)]
     [InlineData(6, 3)]

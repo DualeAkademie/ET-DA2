@@ -36,6 +36,7 @@ public class DatumKalender
         return 0;
     }
 
+    // ReSharper disable once UnusedMember.Global
     public static bool IsLeapYear(int year)
     {
         _ = year;

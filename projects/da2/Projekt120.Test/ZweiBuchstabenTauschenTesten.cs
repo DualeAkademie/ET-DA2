@@ -2,7 +2,7 @@ namespace Projekt120.Test;
 public class ZweiBuchstabenTauschenTesten
 {
     [Theory]
-
+    [InlineData(false, null, null, 0, 0)]
     [InlineData(false, " ", " ", -1, 0)]
     [InlineData(false, " ", " ", 0, -1)]
     [InlineData(false, "", "", 0, 0)]

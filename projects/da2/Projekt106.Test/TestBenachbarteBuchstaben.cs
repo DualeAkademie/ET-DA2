@@ -3,6 +3,7 @@ namespace Projekt106.Test;
 public class TestBenachbarteBuchstaben
 {
     [Theory]
+    [InlineData(false, null)]
     [InlineData(false, "")]
     [InlineData(false, "123")]
     [InlineData(false, "a")]

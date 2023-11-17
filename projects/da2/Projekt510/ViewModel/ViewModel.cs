@@ -13,15 +13,14 @@ public partial class ViewModel : ObservableObject
     public ObservableCollection<HornerSchema> HornerSchemaHex { get; set; }
 
     public int AnzahlByte { get; set; }
-    public int DezimaleZahl { get; set; }
     private readonly MainWindow _mainWindow;
 
     public ViewModel(MainWindow mainWindow, CancellationTokenSource cancellationTokenSource)
     {
         _mainWindow = mainWindow;
 
-        HornerSchemaBin = new ObservableCollection<HornerSchema>();
-        HornerSchemaHex = new ObservableCollection<HornerSchema>();
+        HornerSchemaBin = [];
+        HornerSchemaHex = [];
 
         StringDezimaleZahl = "";
         StringBinaerC = "";

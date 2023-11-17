@@ -5,27 +5,18 @@ using System.Windows.Controls;
 
 namespace Projekt501.ViewModel;
 
-public partial class VmProjekt : ObservableObject
+public partial class VmProjekt(MainWindow mainWindow, ModelProjekt modelProjekt) : ObservableObject
 {
-
-    private readonly MainWindow _mainWindow;
-    private readonly ModelProjekt _modelProjekt;
-
-    public VmProjekt(MainWindow mainWindow, ModelProjekt modelProjekt)
-    {
-        _mainWindow = mainWindow;
-        _modelProjekt = modelProjekt;
-    }
     public void AlleBezirkeEinlesen()
     {
-        var bezirke = _modelProjekt.Plz!.Data!.Select(item => item.Bezirk).Distinct().OrderBy(n => n);
+        var bezirke = modelProjekt.Plz!.Data!.Select(item => item.Bezirk).Distinct().OrderBy(n => n);
 
         foreach (var b in bezirke)
         {
-            _ = _mainWindow.ComboBox.Items.Add(b);
+            _ = mainWindow.ComboBox.Items.Add(b);
         }
 
-        _mainWindow.ComboBox.SelectedIndex = 1;
+        mainWindow.ComboBox.SelectedIndex = 1;
     }
     public void BezirkGeaendert(SelectionChangedEventArgs e)
     {
@@ -34,7 +25,7 @@ public partial class VmProjekt : ObservableObject
 
         DataGridZeilen.Clear();
 
-        foreach (var data in _modelProjekt.Plz!.Data!)
+        foreach (var data in modelProjekt.Plz!.Data!)
         {
             if (data.Bezirk!.Contains(bezirk))
             {

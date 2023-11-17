@@ -30,7 +30,7 @@ public class ZahlenKonvertieren
         OktalPlc
     }
 
-    public static string ZahlensystemKonvertieren(string zahl, Zahlensystem zahlensystem)
+    public static string ZahlensystemKonvertieren(string? zahl, Zahlensystem zahlensystem)
     {
         _ = zahl;
         _ = zahlensystem;

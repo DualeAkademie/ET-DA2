@@ -16,20 +16,20 @@ public class PrimzahlenTesten
         Test12345 = 10
 
     }
-    private readonly List<List<int>> _primzahlen = new()
-  {
-      new List<int>(),
-      new List<int>(),
-      new List<int> {2},
-      new List<int> {3},
-      new List<int> {2,2},
-      new List<int> {5},
-      new List<int> {2,3},
-      new List<int> {2,5},
-      new List<int> {2,2,3},
-      new List<int> {3,41},
-      new List<int> {3,5,823}
-  };
+    private readonly List<List<int>> _primzahlen =
+  [
+      [],
+      [],
+      [2],
+      [3],
+      [2, 2],
+      [5],
+      [2, 3],
+      [2, 5],
+      [2, 2, 3],
+      [3, 41],
+      [3, 5, 823]
+  ];
 
 
     [Theory]

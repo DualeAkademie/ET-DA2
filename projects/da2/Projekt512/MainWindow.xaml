@@ -1,0 +1,338 @@
+﻿<Window x:Class="Projekt512.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Projekt512.ViewModel" d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
+        mc:Ignorable="d"
+        Title="Projekt 512: Bilder drehen" Height="850" Width="800">
+
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <ComboBox x:Name="Winkel3" Grid.Column="9" Grid.Row="2" FontSize="12pt"  SelectionChanged="Winkel3Geaendert" SelectedIndex="0">
+            <ComboBoxItem>CW0°</ComboBoxItem>
+            <ComboBoxItem>CW90°</ComboBoxItem>
+            <ComboBoxItem>CW180°</ComboBoxItem>
+            <ComboBoxItem>CW270°</ComboBoxItem>
+            <ComboBoxItem>CCW0°</ComboBoxItem>
+            <ComboBoxItem>CCW90°</ComboBoxItem>
+            <ComboBoxItem>CCW180°</ComboBoxItem>
+            <ComboBoxItem>CCW270°</ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox x:Name="Winkel4" Grid.Column="9" Grid.Row="6" FontSize="12pt"  SelectionChanged="Winkel4Geaendert" SelectedIndex="0">
+            <ComboBoxItem>CW0°</ComboBoxItem>
+            <ComboBoxItem>CW90°</ComboBoxItem>
+            <ComboBoxItem>CW180°</ComboBoxItem>
+            <ComboBoxItem>CW270°</ComboBoxItem>
+            <ComboBoxItem>CCW0°</ComboBoxItem>
+            <ComboBoxItem>CCW90°</ComboBoxItem>
+            <ComboBoxItem>CCW180°</ComboBoxItem>
+            <ComboBoxItem>CCW270°</ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox x:Name="Winkel5" Grid.Column="9" Grid.Row="11" FontSize="12pt"  SelectionChanged="Winkel5Geaendert" SelectedIndex="0">
+            <ComboBoxItem>CW0°</ComboBoxItem>
+            <ComboBoxItem>CW90°</ComboBoxItem>
+            <ComboBoxItem>CW180°</ComboBoxItem>
+            <ComboBoxItem>CW270°</ComboBoxItem>
+            <ComboBoxItem>CCW0°</ComboBoxItem>
+            <ComboBoxItem>CCW90°</ComboBoxItem>
+            <ComboBoxItem>CCW180°</ComboBoxItem>
+            <ComboBoxItem>CCW270°</ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox x:Name="Winkel6" Grid.Column="9" Grid.Row="17" FontSize="12pt"  SelectionChanged="Winkel6Geaendert" SelectedIndex="0">
+            <ComboBoxItem>CW0°</ComboBoxItem>
+            <ComboBoxItem>CW90°</ComboBoxItem>
+            <ComboBoxItem>CW180°</ComboBoxItem>
+            <ComboBoxItem>CW270°</ComboBoxItem>
+            <ComboBoxItem>CCW0°</ComboBoxItem>
+            <ComboBoxItem>CCW90°</ComboBoxItem>
+            <ComboBoxItem>CCW180°</ComboBoxItem>
+            <ComboBoxItem>CCW270°</ComboBoxItem>
+        </ComboBox>
+
+        <Label Grid.Column="2" Grid.Row="2" Content="{Binding Aa00}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="2" Content="{Binding Aa01}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="2" Content="{Binding Aa02}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="3" Content="{Binding Aa10}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="3" Content="{Binding Aa11}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="3" Content="{Binding Aa12}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="4" Content="{Binding Aa20}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="4" Content="{Binding Aa21}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="4" Content="{Binding Aa22}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+
+
+        <Label Grid.Column="11" Grid.Row="2" Content="{Binding Ae00}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="2" Content="{Binding Ae01}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="2" Content="{Binding Ae02}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="11" Grid.Row="3" Content="{Binding Ae10}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="3" Content="{Binding Ae11}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="3" Content="{Binding Ae12}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="11" Grid.Row="4" Content="{Binding Ae20}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="4" Content="{Binding Ae21}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="4" Content="{Binding Ae22}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+
+
+
+        <Label Grid.Column="2" Grid.Row="6" Content="{Binding Ba00}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="6" Content="{Binding Ba01}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="6" Content="{Binding Ba02}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="6" Content="{Binding Ba03}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="7" Content="{Binding Ba10}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="7" Content="{Binding Ba11}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="7" Content="{Binding Ba12}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="7" Content="{Binding Ba13}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="8" Content="{Binding Ba20}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="8" Content="{Binding Ba21}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="8" Content="{Binding Ba22}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="8" Content="{Binding Ba23}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="9" Content="{Binding Ba30}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="9" Content="{Binding Ba31}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="9" Content="{Binding Ba32}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="9" Content="{Binding Ba33}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+
+
+
+        <Label Grid.Column="11" Grid.Row="6" Content="{Binding Be00}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="6" Content="{Binding Be01}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="6" Content="{Binding Be02}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="6" Content="{Binding Be03}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="11" Grid.Row="7" Content="{Binding Be10}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="7" Content="{Binding Be11}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="7" Content="{Binding Be12}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="7" Content="{Binding Be13}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="11" Grid.Row="8" Content="{Binding Be20}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="8" Content="{Binding Be21}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="8" Content="{Binding Be22}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="8" Content="{Binding Be23}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="11" Grid.Row="9" Content="{Binding Be30}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="9" Content="{Binding Be31}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="9" Content="{Binding Be32}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="9" Content="{Binding Be33}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+
+
+
+
+
+        <Label Grid.Column="2" Grid.Row="11" Content="{Binding Ca00}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="11" Content="{Binding Ca01}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="11" Content="{Binding Ca02}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="11" Content="{Binding Ca03}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="11" Content="{Binding Ca04}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="12" Content="{Binding Ca10}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="12" Content="{Binding Ca11}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="12" Content="{Binding Ca12}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="12" Content="{Binding Ca13}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="12" Content="{Binding Ca14}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="13" Content="{Binding Ca20}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="13" Content="{Binding Ca21}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="13" Content="{Binding Ca22}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="13" Content="{Binding Ca23}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="13" Content="{Binding Ca24}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="14" Content="{Binding Ca30}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="14" Content="{Binding Ca31}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="14" Content="{Binding Ca32}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="14" Content="{Binding Ca33}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="14" Content="{Binding Ca34}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="15" Content="{Binding Ca40}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="15" Content="{Binding Ca41}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="15" Content="{Binding Ca42}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="15" Content="{Binding Ca43}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="15" Content="{Binding Ca44}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+
+
+
+
+        <Label Grid.Column="11" Grid.Row="11" Content="{Binding Ce00}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="11" Content="{Binding Ce01}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="11" Content="{Binding Ce02}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="11" Content="{Binding Ce03}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="11" Content="{Binding Ce04}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                                               
+        <Label Grid.Column="11" Grid.Row="12" Content="{Binding Ce10}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="12" Content="{Binding Ce11}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="12" Content="{Binding Ce12}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="12" Content="{Binding Ce13}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="12" Content="{Binding Ce14}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                                               
+        <Label Grid.Column="11" Grid.Row="13" Content="{Binding Ce20}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="13" Content="{Binding Ce21}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="13" Content="{Binding Ce22}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="13" Content="{Binding Ce23}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="13" Content="{Binding Ce24}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                                               
+        <Label Grid.Column="11" Grid.Row="14" Content="{Binding Ce30}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="14" Content="{Binding Ce31}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="14" Content="{Binding Ce32}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="14" Content="{Binding Ce33}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="14" Content="{Binding Ce34}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                                               
+        <Label Grid.Column="11" Grid.Row="15" Content="{Binding Ce40}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="15" Content="{Binding Ce41}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="15" Content="{Binding Ce42}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="15" Content="{Binding Ce43}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="15" Content="{Binding Ce44}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+
+
+
+        <Label Grid.Column="2" Grid.Row="17" Content="{Binding Da00}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="17" Content="{Binding Da01}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="17" Content="{Binding Da02}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="17" Content="{Binding Da03}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="17" Content="{Binding Da04}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="7" Grid.Row="17" Content="{Binding Da05}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="18" Content="{Binding Da10}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="18" Content="{Binding Da11}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="18" Content="{Binding Da12}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="18" Content="{Binding Da13}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="18" Content="{Binding Da14}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="7" Grid.Row="18" Content="{Binding Da15}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="19" Content="{Binding Da20}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="19" Content="{Binding Da21}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="19" Content="{Binding Da22}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="19" Content="{Binding Da23}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="19" Content="{Binding Da24}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="7" Grid.Row="19" Content="{Binding Da25}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="20" Content="{Binding Da30}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="20" Content="{Binding Da31}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="20" Content="{Binding Da32}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="20" Content="{Binding Da33}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="20" Content="{Binding Da34}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="7" Grid.Row="20" Content="{Binding Da35}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="21" Content="{Binding Da40}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="21" Content="{Binding Da41}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="21" Content="{Binding Da42}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="21" Content="{Binding Da43}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="21" Content="{Binding Da44}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="7" Grid.Row="21" Content="{Binding Da45}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+        <Label Grid.Column="2" Grid.Row="22" Content="{Binding Da50}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="3" Grid.Row="22" Content="{Binding Da51}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="4" Grid.Row="22" Content="{Binding Da52}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="5" Grid.Row="22" Content="{Binding Da53}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="6" Grid.Row="22" Content="{Binding Da54}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="7" Grid.Row="22" Content="{Binding Da55}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+
+
+
+        <Label Grid.Column="11" Grid.Row="17" Content="{Binding De00}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="17" Content="{Binding De01}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="17" Content="{Binding De02}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="17" Content="{Binding De03}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="17" Content="{Binding De04}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="16" Grid.Row="17" Content="{Binding De05}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                                
+        <Label Grid.Column="11" Grid.Row="18" Content="{Binding De10}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="18" Content="{Binding De11}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="18" Content="{Binding De12}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="18" Content="{Binding De13}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="18" Content="{Binding De14}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="16" Grid.Row="18" Content="{Binding De15}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                               
+        <Label Grid.Column="11" Grid.Row="19" Content="{Binding De20}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="19" Content="{Binding De21}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="19" Content="{Binding De22}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="19" Content="{Binding De23}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="19" Content="{Binding De24}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="16" Grid.Row="19" Content="{Binding De25}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                               
+        <Label Grid.Column="11" Grid.Row="20" Content="{Binding De30}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="20" Content="{Binding De31}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="20" Content="{Binding De32}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="20" Content="{Binding De33}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="20" Content="{Binding De34}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="16" Grid.Row="20" Content="{Binding De35}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                               
+        <Label Grid.Column="11" Grid.Row="21" Content="{Binding De40}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="21" Content="{Binding De41}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="21" Content="{Binding De42}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="21" Content="{Binding De43}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="21" Content="{Binding De44}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="16" Grid.Row="21" Content="{Binding De45}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+                                                               
+        <Label Grid.Column="11" Grid.Row="22" Content="{Binding De50}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="12" Grid.Row="22" Content="{Binding De51}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="13" Grid.Row="22" Content="{Binding De52}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="14" Grid.Row="22" Content="{Binding De53}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="15" Grid.Row="22" Content="{Binding De54}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+        <Label Grid.Column="16" Grid.Row="22" Content="{Binding De55}" BorderBrush="Black" BorderThickness="1" FontSize="12pt" />
+
+    </Grid>
+</Window>

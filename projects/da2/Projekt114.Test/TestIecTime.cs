@@ -9,6 +9,7 @@ public class TestIecTime
     private const long Time1D = 24 * Time1H;
 
     [Theory]
+    [InlineData(0, null)]
     [InlineData(0, "")]
     [InlineData(0, "?")]
     [InlineData(0, "T#0")]
@@ -22,7 +23,7 @@ public class TestIecTime
     [InlineData(3 * Time1H + 5 * Time1M, "T#3H5m")]
     [InlineData(2 * Time1Ms + 3 * Time1S + 4 * Time1M + 5 * Time1H + 6 * Time1D, "t#2Ms3s4M5h6D")]
 
-    public void TestIecTimeConverter(long exp, string iecTime)
+    public void TestIecTimeConverter(long exp, string? iecTime)
     {
         var time = IecTime.IecTimeConvertieren(iecTime);
         Assert.Equal(TimeSpan.FromMilliseconds(exp), time);

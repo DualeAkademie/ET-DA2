@@ -3,6 +3,7 @@ namespace Projekt115.Test;
 public class TestZahlensystemNachOct
 {
     [Theory]
+    [InlineData("00", null, ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("00", "2#0", ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("8#0", "0b0", ZahlenKonvertieren.Zahlensystem.OktalPlc)]
     [InlineData("01", "2#1", ZahlenKonvertieren.Zahlensystem.OktalC)]
@@ -10,7 +11,7 @@ public class TestZahlensystemNachOct
     [InlineData("020", "2#0001_0000", ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("8#310", "0b1100_1000", ZahlenKonvertieren.Zahlensystem.OktalPlc)]
 
-    public void TestBinaereZahlenKonvertieren(string exp, string zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
+    public void TestBinaereZahlenKonvertieren(string exp, string? zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
     {
         var zahlBin = ZahlenKonvertieren.ZahlensystemKonvertieren(zahl, zahlensystem);
 
@@ -20,6 +21,7 @@ public class TestZahlensystemNachOct
 
 
     [Theory]
+    [InlineData("00", null, ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("00", "16#0", ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("8#0", "0x0", ZahlenKonvertieren.Zahlensystem.OktalPlc)]
     [InlineData("01", "16#1", ZahlenKonvertieren.Zahlensystem.OktalC)]
@@ -28,7 +30,7 @@ public class TestZahlensystemNachOct
     [InlineData("8#310", "0xC8", ZahlenKonvertieren.Zahlensystem.OktalPlc)]
     [InlineData("0361100", "16#1E240", ZahlenKonvertieren.Zahlensystem.OktalC)]
 
-    public void TestHexadezimaleZahlenKonvertieren(string exp, string zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
+    public void TestHexadezimaleZahlenKonvertieren(string exp, string? zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
     {
         var zahlBin = ZahlenKonvertieren.ZahlensystemKonvertieren(zahl, zahlensystem);
 
@@ -37,6 +39,7 @@ public class TestZahlensystemNachOct
 
 
     [Theory]
+    [InlineData("00", null, ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("00", "0", ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("8#0", "0", ZahlenKonvertieren.Zahlensystem.OktalPlc)]
     [InlineData("01", "1", ZahlenKonvertieren.Zahlensystem.OktalC)]
@@ -46,7 +49,7 @@ public class TestZahlensystemNachOct
     [InlineData("0310", "200", ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("8#361100", "123456", ZahlenKonvertieren.Zahlensystem.OktalPlc)]
 
-    public void TestDezimaleZahlenKonvertieren(string exp, string zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
+    public void TestDezimaleZahlenKonvertieren(string exp, string? zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
     {
         var zahlBin = ZahlenKonvertieren.ZahlensystemKonvertieren(zahl, zahlensystem);
 
@@ -55,6 +58,7 @@ public class TestZahlensystemNachOct
 
 
     [Theory]
+    [InlineData("00", null, ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("00", "00", ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("8#0", "8#0", ZahlenKonvertieren.Zahlensystem.OktalPlc)]
     [InlineData("01", "01", ZahlenKonvertieren.Zahlensystem.OktalC)]

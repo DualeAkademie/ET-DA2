@@ -13,8 +13,8 @@ public class HornerHexTesten
         Test12345 = 10
     }
 
-    private readonly List<HornerSchema> _testergebnisse = new()
-    {
+    private readonly List<HornerSchema> _testergebnisse =
+    [
         new HornerSchema("", 0, ""),    // Test0
 
         new HornerSchema("", 1, ""),    // Test1
@@ -35,7 +35,7 @@ public class HornerHexTesten
         new HornerSchema("2", 48, "3"),
         new HornerSchema("3", 3, "0"),
         new HornerSchema("4", 0, "3")
-    };
+    ];
 
 
     [Theory]

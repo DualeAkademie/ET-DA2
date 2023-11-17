@@ -13,8 +13,8 @@ public class HornerBinTesten
         Test42 = 12
     }
 
-    private readonly List<HornerSchema> _testergebnisse = new()
-    {
+    private readonly List<HornerSchema> _testergebnisse =
+    [
         new HornerSchema("", 0, ""),    // Test0
 
         new HornerSchema("", 1, ""),    // Test1
@@ -38,7 +38,7 @@ public class HornerBinTesten
         new HornerSchema("4", 2, "1"),
         new HornerSchema("5", 1, "0"),
         new HornerSchema("6", 0, "1")
-    };
+    ];
 
 
     [Theory]

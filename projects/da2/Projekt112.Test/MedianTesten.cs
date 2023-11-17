@@ -13,16 +13,16 @@ public class MedianTesten
         Test6
     }
 
-    private static readonly List<List<int>?> s_liste = new()
-    {
-        new List<int> {1},
-        new List<int> {1,2,3},
-        new List<int> {2,1,3},
-        new List<int> {1,2,3,4,5,6,7,8,9},
-        new List<int> {9,8,7,6,5,4,3,2,1},
-        new List<int> {1,2,3,4,5,6},
-        new List<int> {6,5,4,3,2,1}
-    };
+    private static readonly List<List<int>>? s_liste =
+    [
+        [1],
+        [1, 2, 3],
+        [2, 1, 3],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [9, 8, 7, 6, 5, 4, 3, 2, 1],
+        [1, 2, 3, 4, 5, 6],
+        [6, 5, 4, 3, 2, 1]
+    ];
 
     [Theory]
     [InlineData(1, TestNr.Test0)]
@@ -35,7 +35,7 @@ public class MedianTesten
 
     public void TestMittelwert(double exp, TestNr testNr)
     {
-        var mittelwert = Median.MedianBerechnen(s_liste[(int) testNr]);
+        var mittelwert = Median.MedianBerechnen(s_liste![(int) testNr]);
 
         Assert.Equal(exp, mittelwert);
     }

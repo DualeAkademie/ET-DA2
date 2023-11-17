@@ -1,5 +1,3 @@
 namespace Projekt510;
 
-public partial class App
-{
-}
+public partial class App;

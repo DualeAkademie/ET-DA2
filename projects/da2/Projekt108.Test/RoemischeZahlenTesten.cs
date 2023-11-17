@@ -61,7 +61,7 @@ public class RoemischeZahlenTesten
     [InlineData(1000, "M")]
     [InlineData(2999, "MMCMXCIX")]
     [InlineData(3000, "MMM")]
-    public void TestKonstruktorSetRoemisch(uint dezimal, string roemisch)
+    public void TestKonstruktorSetRoemisch(uint dezimal, string? roemisch)
     {
         var ergebnis = RoemischeZahlen.RoemischInDezimalUmrechnen(roemisch);
         Assert.Equal(dezimal, ergebnis);
