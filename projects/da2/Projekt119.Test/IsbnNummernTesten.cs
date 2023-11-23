@@ -13,6 +13,10 @@ public class IsbnNummernTesten
     [InlineData(true, "ISBN 1774266385")]
     [InlineData(true, "ISBN 978-1774266380")]
     [InlineData(true, "ISBN 1-23456-789-X")]
+    [InlineData(true, "ISBN 3-257-79023-6")]
+    [InlineData(true, "ISBN 3-8303-6033-9")]
+    [InlineData(true, "ISBN 9-783830-360339")]
+    [InlineData(true, "ISBN - 9781861972712")]
 
     public void TestIsbnNummer(bool exp, string? isbn)
     {
