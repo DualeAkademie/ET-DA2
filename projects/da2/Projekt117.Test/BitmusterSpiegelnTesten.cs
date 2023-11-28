@@ -14,8 +14,8 @@ public class BitmusterSpiegelnTesten
 
     public void TestBitmusterSpiegeln(uint exp, uint bitmuster)
     {
-        var bitmusterSpielgen = BitmusterSpiegeln.BitmusterSpielgen(bitmuster);
+        var bitmusterSpiegeln = BitmusterSpiegeln.BitmusterSpiegeln(bitmuster);
 
-        Assert.Equal(exp, bitmusterSpielgen);
+        Assert.Equal(exp, bitmusterSpiegeln);
     }
 }
