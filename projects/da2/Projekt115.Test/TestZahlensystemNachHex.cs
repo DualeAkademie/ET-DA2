@@ -68,7 +68,7 @@ public class TestZahlensystemNachHex
     [InlineData("0xC8", "0310", ZahlenKonvertieren.Zahlensystem.HexadezimalC)]
     [InlineData("16#1E240", "8#361100", ZahlenKonvertieren.Zahlensystem.HexadezimalPlc)]
 
-    public void TestOktaleZahlenKonvertieren(string exp, string zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
+    public void TestOktaleZahlenKonvertieren(string exp, string? zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
     {
         var zahlBin = ZahlenKonvertieren.ZahlensystemKonvertieren(zahl, zahlensystem);
 

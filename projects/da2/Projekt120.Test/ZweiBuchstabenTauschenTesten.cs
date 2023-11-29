@@ -13,7 +13,7 @@ public class ZweiBuchstabenTauschenTesten
     [InlineData(true, "abfdecghijklmnopqrst", "abcdefghijklmnopqrst", 5, 2)]
 
 
-    public void ZweiBuchstabenTauschenTeste(bool expBool, string expText, string? text, int position1, int position2)
+    public void ZweiBuchstabenTauschenTeste(bool expBool, string? expText, string? text, int position1, int position2)
     {
         var exp = BuchstabenFunktionen.ZweiBuchstabenTauschen(ref text, position1, position2);
 

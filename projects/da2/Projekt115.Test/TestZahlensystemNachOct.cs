@@ -68,7 +68,7 @@ public class TestZahlensystemNachOct
     [InlineData("0310", "0310", ZahlenKonvertieren.Zahlensystem.OktalC)]
     [InlineData("8#361100", "8#361100", ZahlenKonvertieren.Zahlensystem.OktalPlc)]
 
-    public void TestOktaleZahlenKonvertieren(string exp, string zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
+    public void TestOktaleZahlenKonvertieren(string exp, string? zahl, ZahlenKonvertieren.Zahlensystem zahlensystem)
     {
         var zahlBin = ZahlenKonvertieren.ZahlensystemKonvertieren(zahl, zahlensystem);
 
