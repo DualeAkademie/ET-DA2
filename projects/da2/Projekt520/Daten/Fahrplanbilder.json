@@ -1,0 +1,574 @@
+﻿{
+    "Bezeichnung": "Fahrplanbild 401",
+    "Url": "https://www.oebb.at/de/fahrplan/fahrplanbilder",
+    "Zuege": [
+        {
+            "bezeichnung": "S1",
+            "nummer": "25809",
+            "richtung": "Lindau-Bludenz",
+            "data": [
+                {
+                    "Name": "Lindau-Insel",
+                    "An": "",
+                    "Ab": "12:23:00"
+                },
+                {
+                    "Name": "Lindau-Reutin",
+                    "An": "12:26:00",
+                    "Ab": "12:27:00"
+                },
+                {
+                    "Name": "Lochau-Hörbranz",
+                    "An": "12:31:00",
+                    "Ab": "12:32:00"
+                },
+                {
+                    "Name": "Bregenz Hafen",
+                    "An": "12:34:00",
+                    "Ab": "12:35:00"
+                },
+                {
+                    "Name": "Bregenz",
+                    "An": "12:37:00",
+                    "Ab": "12:44:00"
+                },
+                {
+                    "Name": "Bregenz Riedenburg",
+                    "An": "",
+                    "Ab": "12:47:00"
+                },
+                {
+                    "Name": "Lauterach",
+                    "An": "",
+                    "Ab": "12:49:00"
+                },
+                {
+                    "Name": "Wolfurt",
+                    "An": "",
+                    "Ab": "12:52:00"
+                },
+                {
+                    "Name": "Schwarzach in Vorarlberg",
+                    "An": "",
+                    "Ab": "12:55:00"
+                },
+                {
+                    "Name": "Haselstauden",
+                    "An": "",
+                    "Ab": "12:57:00"
+                },
+                {
+                    "Name": "Dornbirn",
+                    "An": "12:59:00",
+                    "Ab": "13:00:00"
+                },
+                {
+                    "Name": "Dornbirn-Schoren",
+                    "An": "",
+                    "Ab": "13:02:00"
+                },
+                {
+                    "Name": "Hatlerdorf",
+                    "An": "",
+                    "Ab": "13:05:00"
+                },
+                {
+                    "Name": "Hohenems",
+                    "An": "",
+                    "Ab": "13:09:00"
+                },
+                {
+                    "Name": "Altach",
+                    "An": "",
+                    "Ab": "13:12:00"
+                },
+                {
+                    "Name": "Götzis",
+                    "An": "",
+                    "Ab": "13:15:00"
+                },
+                {
+                    "Name": "Klaus in Vorarlberg",
+                    "An": "",
+                    "Ab": "13:18:00"
+                },
+                {
+                    "Name": "Sulz-Röthis",
+                    "An": "",
+                    "Ab": "13:21:00"
+                },
+                {
+                    "Name": "Rankweil",
+                    "An": "",
+                    "Ab": "13:24:00"
+                },
+                {
+                    "Name": "Feldkirch-Amberg",
+                    "An": "",
+                    "Ab": "13:27:00"
+                },
+                {
+                    "Name": "Feldkirch",
+                    "An": "13:30:00",
+                    "Ab": "13:31:00"
+                },
+                {
+                    "Name": "Frastanz",
+                    "An": "",
+                    "Ab": "13:35:00"
+                },
+                {
+                    "Name": "Schlins-Beschling",
+                    "An": "",
+                    "Ab": "13:39:00"
+                },
+                {
+                    "Name": "Nenzing",
+                    "An": "",
+                    "Ab": "13:41:00"
+                },
+                {
+                    "Name": "Ludesch",
+                    "An": "",
+                    "Ab": "13:45:00"
+                },
+                {
+                    "Name": "Nüziders",
+                    "An": "",
+                    "Ab": "13:48:00"
+                },
+                {
+                    "Name": "Bludenz",
+                    "An": "13:51:00",
+                    "Ab": ""
+                }
+            ]
+        },
+        {
+            "bezeichnung": "S1",
+            "nummer": "25802",
+            "richtung": "Bludenz-Lindau",
+            "data": [
+                {
+                    "Name": "Bludenz",
+                    "An": "",
+                    "Ab": "04:39:00"
+                },
+                {
+                    "Name": "Nüziders",
+                    "An": "",
+                    "Ab": "04:42:00"
+                },
+                {
+                    "Name": "Ludesch",
+                    "An": "",
+                    "Ab": "04:45:00"
+                },
+                {
+                    "Name": "Nenzing",
+                    "An": "",
+                    "Ab": "04:49:00"
+                },
+                {
+                    "Name": "Schlins-Beschling",
+                    "An": "",
+                    "Ab": "04:51:00"
+                },
+                {
+                    "Name": "Frastanz",
+                    "An": "",
+                    "Ab": "04:55:00"
+                },
+                {
+                    "Name": "Feldkirch",
+                    "An": "04:59:00",
+                    "Ab": "05:00:00"
+                },
+                {
+                    "Name": "Feldkirch-Amberg",
+                    "An": "",
+                    "Ab": "05:02:00"
+                },
+                {
+                    "Name": "Rankweil",
+                    "An": "",
+                    "Ab": "05:05:00"
+                },
+                {
+                    "Name": "Sulz-Röthis",
+                    "An": "",
+                    "Ab": "05:08:00"
+                },
+                {
+                    "Name": "Klaus in Vorarlberg",
+                    "An": "",
+                    "Ab": "05:11:00"
+                },
+                {
+                    "Name": "Götzis",
+                    "An": "",
+                    "Ab": "05:14:00"
+                },
+                {
+                    "Name": "Altach",
+                    "An": "",
+                    "Ab": "05:17:00"
+                },
+                {
+                    "Name": "Hohenems",
+                    "An": "",
+                    "Ab": "05:20:00"
+                },
+                {
+                    "Name": "Hatlerdorf",
+                    "An": "",
+                    "Ab": "05:24:00"
+                },
+                {
+                    "Name": "Dornbirn-Schoren",
+                    "An": "",
+                    "Ab": "05:26:00"
+                },
+                {
+                    "Name": "Dornbirn",
+                    "An": "05:28:00",
+                    "Ab": "05:29:00"
+                },
+                {
+                    "Name": "Haselstauden",
+                    "An": "",
+                    "Ab": "05:31:00"
+                },
+                {
+                    "Name": "Schwarzach in Vorarlberg",
+                    "An": "",
+                    "Ab": "05:33:00"
+                },
+                {
+                    "Name": "Wolfurt",
+                    "An": "",
+                    "Ab": "05:36:00"
+                },
+                {
+                    "Name": "Lauterach",
+                    "An": "",
+                    "Ab": "05:39:00"
+                },
+                {
+                    "Name": "Bregenz Riedenburg",
+                    "An": "",
+                    "Ab": "05:41:00"
+                },
+                {
+                    "Name": "Bregenz",
+                    "An": "05:44:00",
+                    "Ab": "05:45:00"
+                },
+                {
+                    "Name": "Bregenz Hafen",
+                    "An": "05:47:00",
+                    "Ab": "05:48:00"
+                },
+                {
+                    "Name": "Lochau-Hörbranz",
+                    "An": "05:50:00",
+                    "Ab": "05:51:00"
+                },
+                {
+                    "Name": "Lindau-Reutin",
+                    "An": "05:54:00",
+                    "Ab": "05:56:00"
+                },
+                {
+                    "Name": "Lindau-Insel",
+                    "An": "06:00:00",
+                    "Ab": ""
+                }
+            ]
+        },
+        {
+            "bezeichnung": "REX1",
+            "nummer": "5571",
+            "richtung": "Lindau-Bludenz",
+            "data": [
+                {
+                    "Name": "Lindau-Insel",
+                    "An": "",
+                    "Ab": "11:55:00"
+                },
+                {
+                    "Name": "Lindau-Reutin",
+                    "An": "11:58:00",
+                    "Ab": "11:59:00"
+                },
+                {
+                    "Name": "Lochau-Hörbranz",
+                    "An": "12:03:00",
+                    "Ab": "12:05:00"
+                },
+                {
+                    "Name": "Bregenz Hafen",
+                    "An": "12:07:00",
+                    "Ab": "12:08:00"
+                },
+                {
+                    "Name": "Bregenz",
+                    "An": "12:10:00",
+                    "Ab": "12:11:00"
+                },
+                {
+                    "Name": "Bregenz Riedenburg",
+                    "An": "",
+                    "Ab": "12:14:00"
+                },
+                {
+                    "Name": "Lauterach",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Wolfurt",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Schwarzach in Vorarlberg",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Haselstauden",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Dornbirn",
+                    "An": "12:20:00",
+                    "Ab": "12:22:00"
+                },
+                {
+                    "Name": "Dornbirn-Schoren",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Hatlerdorf",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Hohenems",
+                    "An": "",
+                    "Ab": "12:28:00"
+                },
+                {
+                    "Name": "Altach",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Götzis",
+                    "An": "",
+                    "Ab": "12:32:00"
+                },
+                {
+                    "Name": "Klaus in Vorarlberg",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Sulz-Röthis",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Rankweil",
+                    "An": "",
+                    "Ab": "12:37:00"
+                },
+                {
+                    "Name": "Feldkirch-Amberg",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Feldkirch",
+                    "An": "12:42:00",
+                    "Ab": "12:44:00"
+                },
+                {
+                    "Name": "Frastanz",
+                    "An": "",
+                    "Ab": "12:48:00"
+                },
+                {
+                    "Name": "Schlins-Beschling",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Nenzing",
+                    "An": "",
+                    "Ab": "12:52:00"
+                },
+                {
+                    "Name": "Ludesch",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Nüziders",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Bludenz",
+                    "An": "12:59:00",
+                    "Ab": ""
+                }
+            ]
+        },
+        {
+            "bezeichnung": "REX1",
+            "nummer": "25802",
+            "richtung": "Bludenz-Lindau",
+            "data": [
+                {
+                    "Name": "Bludenz",
+                    "An": "",
+                    "Ab": "06:00:00"
+                },
+                {
+                    "Name": "Nüziders",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Ludesch",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Nenzing",
+                    "An": "",
+                    "Ab": "06:06:00"
+                },
+                {
+                    "Name": "Schlins-Beschling",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Frastanz",
+                    "An": "",
+                    "Ab": "06:11:00"
+                },
+                {
+                    "Name": "Feldkirch",
+                    "An": "06:15:00",
+                    "Ab": "06:17:00"
+                },
+                {
+                    "Name": "Feldkirch-Amberg",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Rankweil",
+                    "An": "",
+                    "Ab": "06:21:00"
+                },
+                {
+                    "Name": "Sulz-Röthis",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Klaus in Vorarlberg",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Götzis",
+                    "An": "",
+                    "Ab": "06:27:00"
+                },
+                {
+                    "Name": "Altach",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Hohenems",
+                    "An": "",
+                    "Ab": "06:32:00"
+                },
+                {
+                    "Name": "Hatlerdorf",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Dornbirn-Schoren",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Dornbirn",
+                    "An": "06:38:00",
+                    "Ab": "06:39:00"
+                },
+                {
+                    "Name": "Haselstauden",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Schwarzach in Vorarlberg",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Wolfurt",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Lauterach",
+                    "An": "",
+                    "Ab": ""
+                },
+                {
+                    "Name": "Bregenz Riedenburg",
+                    "An": "",
+                    "Ab": "06:45:00"
+                },
+                {
+                    "Name": "Bregenz",
+                    "An": "06:48:00",
+                    "Ab": "06:49:00"
+                },
+                {
+                    "Name": "Bregenz Hafen",
+                    "An": "06:51:00",
+                    "Ab": "06:52:00"
+                },
+                {
+                    "Name": "Lochau-Hörbranz",
+                    "An": "06:54:00",
+                    "Ab": "06:55:00"
+                },
+                {
+                    "Name": "Lindau-Reutin",
+                    "An": "06:58:00",
+                    "Ab": "06:59:00"
+                },
+                {
+                    "Name": "Lindau-Insel",
+                    "An": "07:03:00",
+                    "Ab": ""
+                }
+            ]
+        }
+    ]
+}

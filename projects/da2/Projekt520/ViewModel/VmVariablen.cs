@@ -1,0 +1,104 @@
+using CommunityToolkit.Mvvm.ComponentModel;
+using System.Windows;
+
+namespace Projekt520.ViewModel;
+
+public partial class ViewModel
+{
+    [ObservableProperty] private bool _boolS1Sued1;
+    [ObservableProperty] private bool _boolS1Sued2;
+    [ObservableProperty] private bool _boolS1Sued3;
+    [ObservableProperty] private bool _boolS1Sued4;
+    [ObservableProperty] private bool _boolS1Sued5;
+    [ObservableProperty] private bool _boolS1Nord1;
+    [ObservableProperty] private bool _boolS1Nord2;
+    [ObservableProperty] private bool _boolS1Nord3;
+    [ObservableProperty] private bool _boolS1Nord4;
+    [ObservableProperty] private bool _boolS1Nord5;
+    [ObservableProperty] private bool _boolRex1Sued1;
+    [ObservableProperty] private bool _boolRex1Sued2;
+    [ObservableProperty] private bool _boolRex1Sued3;
+    [ObservableProperty] private bool _boolRex1Sued4;
+    [ObservableProperty] private bool _boolRex1Sued5;
+    [ObservableProperty] private bool _boolRex1Nord1;
+    [ObservableProperty] private bool _boolRex1Nord2;
+    [ObservableProperty] private bool _boolRex1Nord3;
+    [ObservableProperty] private bool _boolRex1Nord4;
+    [ObservableProperty] private bool _boolRex1Nord5;
+
+    [ObservableProperty] private int _intS1Sued1;
+    [ObservableProperty] private int _intS1Sued2;
+    [ObservableProperty] private int _intS1Sued3;
+    [ObservableProperty] private int _intS1Sued4;
+    [ObservableProperty] private int _intS1Sued5;
+    [ObservableProperty] private int _intS1Nord1;
+    [ObservableProperty] private int _intS1Nord2;
+    [ObservableProperty] private int _intS1Nord3;
+    [ObservableProperty] private int _intS1Nord4;
+    [ObservableProperty] private int _intS1Nord5;
+    [ObservableProperty] private int _intRex1Sued1;
+    [ObservableProperty] private int _intRex1Sued2;
+    [ObservableProperty] private int _intRex1Sued3;
+    [ObservableProperty] private int _intRex1Sued4;
+    [ObservableProperty] private int _intRex1Sued5;
+    [ObservableProperty] private int _intRex1Nord1;
+    [ObservableProperty] private int _intRex1Nord2;
+    [ObservableProperty] private int _intRex1Nord3;
+    [ObservableProperty] private int _intRex1Nord4;
+    [ObservableProperty] private int _intRex1Nord5;
+
+
+    [ObservableProperty] private Visibility _visibilityS1Sued1;
+    [ObservableProperty] private Visibility _visibilityS1Sued2;
+    [ObservableProperty] private Visibility _visibilityS1Sued3;
+    [ObservableProperty] private Visibility _visibilityS1Sued4;
+    [ObservableProperty] private Visibility _visibilityS1Sued5;
+    [ObservableProperty] private Visibility _visibilityS1Nord1;
+    [ObservableProperty] private Visibility _visibilityS1Nord2;
+    [ObservableProperty] private Visibility _visibilityS1Nord3;
+    [ObservableProperty] private Visibility _visibilityS1Nord4;
+    [ObservableProperty] private Visibility _visibilityS1Nord5;
+    [ObservableProperty] private Visibility _visibilityRex1Sued1;
+    [ObservableProperty] private Visibility _visibilityRex1Sued2;
+    [ObservableProperty] private Visibility _visibilityRex1Sued3;
+    [ObservableProperty] private Visibility _visibilityRex1Sued4;
+    [ObservableProperty] private Visibility _visibilityRex1Sued5;
+    [ObservableProperty] private Visibility _visibilityRex1Nord1;
+    [ObservableProperty] private Visibility _visibilityRex1Nord2;
+    [ObservableProperty] private Visibility _visibilityRex1Nord3;
+    [ObservableProperty] private Visibility _visibilityRex1Nord4;
+    [ObservableProperty] private Visibility _visibilityRex1Nord5;
+
+    [ObservableProperty] private string? _stringS1Sued1AnDornbirn;
+    [ObservableProperty] private string? _stringS1Sued1AnFeldirch;
+    [ObservableProperty] private string? _stringS1Sued2AnDornbirn;
+    [ObservableProperty] private string? _stringS1Sued2AnFeldirch;
+    [ObservableProperty] private string? _stringS1Sued3AnDornbirn;
+    [ObservableProperty] private string? _stringS1Sued3AnFeldirch;
+    [ObservableProperty] private string? _stringS1Sued4AnDornbirn;
+    [ObservableProperty] private string? _stringS1Sued4AnFeldirch;
+    [ObservableProperty] private string? _stringS1Nord1AnDornbirn;
+    [ObservableProperty] private string? _stringS1Nord1AnFeldirch;
+    [ObservableProperty] private string? _stringS1Nord2AnDornbirn;
+    [ObservableProperty] private string? _stringS1Nord2AnFeldirch;
+    [ObservableProperty] private string? _stringS1Nord3AnDornbirn;
+    [ObservableProperty] private string? _stringS1Nord3AnFeldirch;
+    [ObservableProperty] private string? _stringS1Nord4AnDornbirn;
+    [ObservableProperty] private string? _stringS1Nord4AnFeldirch;
+    [ObservableProperty] private string? _stringRex1Sued1AnDornbirn;
+    [ObservableProperty] private string? _stringRex1Sued1AnFeldirch;
+    [ObservableProperty] private string? _stringRex1Sued2AnDornbirn;
+    [ObservableProperty] private string? _stringRex1Sued2AnFeldirch;
+    [ObservableProperty] private string? _stringRex1Sued3AnDornbirn;
+    [ObservableProperty] private string? _stringRex1Sued3AnFeldirch;
+    [ObservableProperty] private string? _stringRex1Sued4AnDornbirn;
+    [ObservableProperty] private string? _stringRex1Sued4AnFeldirch;
+    [ObservableProperty] private string? _stringRex1Nord1AnDornbirn;
+    [ObservableProperty] private string? _stringRex1Nord1AnFeldirch;
+    [ObservableProperty] private string? _stringRex1Nord2AnDornbirn;
+    [ObservableProperty] private string? _stringRex1Nord2AnFeldirch;
+    [ObservableProperty] private string? _stringRex1Nord3AnDornbirn;
+    [ObservableProperty] private string? _stringRex1Nord3AnFeldirch;
+    [ObservableProperty] private string? _stringRex1Nord4AnDornbirn;
+    [ObservableProperty] private string? _stringRex1Nord4AnFeldirch;
+}

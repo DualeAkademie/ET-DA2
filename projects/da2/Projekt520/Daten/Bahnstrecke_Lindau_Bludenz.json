@@ -1,0 +1,141 @@
+{
+    "Bezeichnung": "Bahnstrecke Lindau-Bludenz",
+    "Url": "https://de.wikipedia.org/wiki/Bahnstrecke_Lindau%E2%80%93Bludenz",
+    "Bahnhoefe": [
+        {
+            "Name": "Lindau-Insel",
+            "Position": 0.000,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Lindau-Reutin",
+            "Position": 2.460,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Lochau-Hörbranz",
+            "Position": 6.716,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Bregenz Hafen",
+            "Position": 9.600,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Bregenz",
+            "Position": 10.405,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Bregenz Riedenburg",
+            "Position": 12.7,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Lauterach",
+            "Position": 14.196,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Wolfurt",
+            "Position": 16.980,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Schwarzach in Vorarlberg",
+            "Position": 18.620,
+            "Hoehe": "398"
+        },
+        {
+            "Name": "Haselstauden",
+            "Position": 20.248,
+            "Hoehe": "429"
+        },
+        {
+            "Name": "Dornbirn",
+            "Position": 22.233,
+            "Hoehe": "429"
+        },
+        {
+            "Name": "Dornbirn-Schoren",
+            "Position": 23.320,
+            "Hoehe": "429"
+        },
+        {
+            "Name": "Hatlerdorf",
+            "Position": 25.138,
+            "Hoehe": "429"
+        },
+        {
+            "Name": "Hohenems",
+            "Position": 30.121,
+            "Hoehe": "421"
+        },
+        {
+            "Name": "Altach",
+            "Position": 32.214,
+            "Hoehe": "421"
+        },
+        {
+            "Name": "Götzis",
+            "Position": 34.760,
+            "Hoehe": "426"
+        },
+        {
+            "Name": "Klaus in Vorarlberg",
+            "Position": 38.145,
+            "Hoehe": "426"
+        },
+        {
+            "Name": "Sulz-Röthis",
+            "Position": 39.998,
+            "Hoehe": "426"
+        },
+        {
+            "Name": "Rankweil",
+            "Position": 42.518,
+            "Hoehe": "463"
+        },
+        {
+            "Name": "Feldkirch-Amberg",
+            "Position": 44.855,
+            "Hoehe": "463"
+        },
+        {
+            "Name": "Feldkirch",
+            "Position": 46.912,
+            "Hoehe": "457"
+        },
+        {
+            "Name": "Frastanz",
+            "Position": 51.387,
+            "Hoehe": "472"
+        },
+        {
+            "Name": "Schlins-Beschling",
+            "Position": 56.198,
+            "Hoehe": "472"
+        },
+        {
+            "Name": "Nenzing",
+            "Position": 57.739,
+            "Hoehe": "507"
+        },
+        {
+            "Name": "Ludesch",
+            "Position": 63.327,
+            "Hoehe": "535"
+        },
+        {
+            "Name": "Nüziders",
+            "Position": 65.224,
+            "Hoehe": "535"
+        },
+        {
+            "Name": "Bludenz",
+            "Position": 67.746,
+            "Hoehe": "558"
+        }
+    ]
+}

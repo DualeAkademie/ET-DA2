@@ -9,8 +9,8 @@ namespace Projekt510.ViewModel;
 
 public partial class ViewModel : ObservableObject
 {
-    public ObservableCollection<HornerSchema> HornerSchemaBin { get; set; } = [];
-    public ObservableCollection<HornerSchema> HornerSchemaHex { get; set; } = [];
+    public ObservableCollection<HornerSchema> HornerSchemaBin { get; set; }
+    public ObservableCollection<HornerSchema> HornerSchemaHex { get; set; }
 
     public int AnzahlByte { get; set; }
     private readonly MainWindow _mainWindow;

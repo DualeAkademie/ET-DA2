@@ -1,0 +1,244 @@
+﻿<Window x:Class="Projekt521.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Projekt521.ViewModel"
+        xmlns:scottPlot="clr-namespace:ScottPlot;assembly=ScottPlot.WPF"
+        d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
+        mc:Ignorable="d"
+        Title="Projekt 521: Photovoltaik" Height="850" Width="1350">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Column="1" Grid.Row="1"  SelectionChanged="TabControl_SelectionChanged" >
+            <TabItem Header="Photovoltaik und Wärmepume">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="1" Grid.Row="1" Content="Von:" HorizontalAlignment="Left" Margin="42,0,0,0"/>
+                    <Label Grid.Column="4" Grid.Row="1"  Content="Bis:" HorizontalAlignment="Left" Margin="48,0,0,0" />
+
+                    <DatePicker x:Name="DateTimeStart0" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeStart, Mode=TwoWay}" SelectedDateChanged="DateChanged"  />
+                    <DatePicker x:Name="DateTimeEnde0" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeEnd, Mode=TwoWay}" SelectedDateChanged="DateChanged" Margin="0,0,10,0" />
+
+                    <scottPlot:WpfPlot x:Name="WpfPlotPvWp" Grid.Column="1"  Grid.ColumnSpan="18" Grid.Row="3"/>
+
+                    <Button  x:Name="ButtonPvWpPv" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Content="PV" Margin="5,10,5,0" Background="{Binding BrushPv}" Command="{Binding ButtonTasterCommand}" CommandParameter="Pv" FontSize="14pt" ToolTip="{Binding StringTooltipPv}" Grid.RowSpan="2"   />
+                    <Button  x:Name="ButtonPvWpWp" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4" Content="WP" Margin="5,10,5,0" Background="{Binding BrushWp}" Command="{Binding ButtonTasterCommand}" CommandParameter="Wp" FontSize="14pt"  ToolTip="{Binding StringTooltipWp}" Grid.RowSpan="2" />
+                    <Button  x:Name="ButtonPvWpWpvonPv" Grid.Column="5"  Grid.ColumnSpan="4" Grid.Row="4" Content="Wp von Pv" Margin="5,10,5,0" Background="{Binding BrushWpvonPv}" Command="{Binding ButtonTasterCommand}" CommandParameter="WpVonPv" FontSize="14pt" Grid.RowSpan="2"/>
+                    <Button  x:Name="ButtonPvWpWpvomNetz" Grid.Column="9" Grid.ColumnSpan="4"  Grid.Row="4" Content="Wp vom Netz" Margin="5,10,5,0" Background="{Binding BrushWpvomNetz}" Command="{Binding ButtonTasterCommand}" CommandParameter="WpVomNetz" FontSize="14pt" Grid.RowSpan="2"/>
+                    <Button  x:Name="ButtonPvWpPvUeberschuss" Grid.Column="13" Grid.ColumnSpan="4"  Grid.Row="4" Content="Pv Überschuss" Margin="5,10,5,0" Background="{Binding BrushPvUeberschuss}" Command="{Binding ButtonTasterCommand}" CommandParameter="PvUeberschuss" FontSize="14pt" Grid.RowSpan="2"/>
+
+                    <Label Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2"  Name="FensterEnergiePv"  Content="{Binding StringFensterEnergiePv}"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12pt" />
+                    <Label Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="2"  Name="FensterEnergieWp"  Content="{Binding StringFensterEnergieWp}"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12pt" />
+
+                    <Label Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="7"  Name="FensterEnergieWpvonPv"  Content="{Binding StringFensterEnergieWpVonPv}"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12pt" />
+                    <Label Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="7"  Name="JahrEnergieWpvonPv"  Content="{Binding StringGesamtEnergieWpVonPv}"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="12pt" />
+                    <Label Grid.Column="9" Grid.ColumnSpan="2" Grid.Row="7"  Name="FensterEnergieWpvomNetz"  Content="{Binding StringFensterEnergieWpVomNetz}"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12pt" />
+                    <Label Grid.Column="11" Grid.ColumnSpan="2" Grid.Row="7"  Name="JahrEnergieWpvomNetz"  Content="{Binding StringGesamtEnergieWpVomNetz}"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="12pt" />
+                    <Label Grid.Column="13" Grid.ColumnSpan="2" Grid.Row="7"  Name="FensterEnergieEinspeisung"  Content="{Binding StringFensterEnergiePvUeberschuss}"  VerticalAlignment="Center" HorizontalAlignment="Left"  FontSize="12pt" />
+                    <Label Grid.Column="15" Grid.ColumnSpan="2" Grid.Row="7"  Name="JahrEnergieEinspeisung"  Content="{Binding StringGesamtEnergiePvUeberschuss}"  VerticalAlignment="Center" HorizontalAlignment="Left"  FontSize="12pt"  />
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Photovoltaikk und Akku">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="1" Grid.Row="1" Content="Von:" HorizontalAlignment="Right"/>
+                    <Label Grid.Column="4" Grid.Row="1"  Content="Bis:" HorizontalAlignment="Right" />
+
+                    <DatePicker x:Name="DateTimeStart1" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeStart, Mode=TwoWay}" SelectedDateChanged="DateChanged"  />
+                    <DatePicker x:Name="DateTimeEnde1" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeEnd, Mode=TwoWay}" SelectedDateChanged="DateChanged" />
+
+                    <Label Grid.Column="10" Grid.Row="1" Content="Akku [Wh]"  />
+                    <TextBox Grid.Column="11" Grid.Row="1"  Name="EnergieAkku" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntEnergieAkku, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <Label Grid.Column="12" Grid.Row="1" Content="Leistung [W]" Grid.ColumnSpan="2"  />
+                    <TextBox Grid.Column="13" Grid.Row="1"  Name="LeistungAkku" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntLeistungAkku, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+
+                    <scottPlot:WpfPlot x:Name="WpfPlotAkku" Grid.Column="1"  Grid.ColumnSpan="17" Grid.Row="3"/>
+
+                    <Button  x:Name="ButtonAkkuPv" Grid.Column="1" Grid.ColumnSpan="2"  Grid.Row="5" Content="PV" Margin="5,0,5,0" Background="{Binding BrushPv}" Command="{Binding ButtonTasterCommand}" CommandParameter="Pv" FontSize="14pt" ToolTip="{Binding StringTooltipPv}" />
+                    <Button  x:Name="ButtonAkkuWp" Grid.Column="3" Grid.ColumnSpan="2"  Grid.Row="5" Content="WP" Margin="5,0,5,0" Background="{Binding BrushWp}" Command="{Binding ButtonTasterCommand}" CommandParameter="Wp" FontSize="14pt" ToolTip="{Binding StringTooltipWp}" />
+                    <Button  x:Name="ButtonAkku" Grid.Column="5" Grid.ColumnSpan="6"  Grid.Row="5" Content="Akku" Margin="5,0,5,0" Background="{Binding BrushAkku}" Command="{Binding ButtonTasterCommand}" CommandParameter="Akku" FontSize="14pt"  ToolTip="{Binding StringTooltipAkku}" />
+                    <Button  x:Name="ButtonAkkuWpvonPv" Grid.Column="11"  Grid.ColumnSpan="2" Grid.Row="5" Content="Wp von Pv+Akku" Margin="5,0,5,0" Background="{Binding BrushWpvonPv}" Command="{Binding ButtonTasterCommand}" CommandParameter="WpVonPv+Akku" FontSize="14pt"/>
+                    <Button  x:Name="ButtonAkkuWpvomNetz" Grid.Column="13" Grid.ColumnSpan="2"  Grid.Row="5" Content="Wp vom Netz" Margin="5,0,5,0" Background="{Binding BrushWpvomNetz}" Command="{Binding ButtonTasterCommand}" CommandParameter="WpVomNetz" FontSize="14pt"/>
+                    <Button  x:Name="ButtonAkkuPvUeberschuss" Grid.Column="15" Grid.ColumnSpan="2"  Grid.Row="5" Content="Pv Überschuss" Margin="5,0,5,0" Background="{Binding BrushPvUeberschuss}" Command="{Binding ButtonTasterCommand}" CommandParameter="PvUeberschuss" FontSize="14pt"/>
+
+                    <Label Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2"  Name="FensterAkkuPv"  Content="{Binding StringFensterEnergiePv}"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12pt" />
+                    <Label Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="2"  Name="FensterAkkuWp"  Content="{Binding StringFensterEnergieWp}"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12pt" />
+                    <Label Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="3"  Name="FensterAkkuLaden"  Content="{Binding StringFensterEnergieAkkuLaden}"  VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="12pt" />
+                    <Label Grid.Column="7" Grid.Row="7" Grid.ColumnSpan="3"  Name="FensterAkkuEndladen"  Content="{Binding StringFensterEnergieAkkuEntladen}"  VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="12pt" />
+                    <Label Grid.Column="8" Grid.Row="7" Grid.ColumnSpan="3"  Name="FensterAkkuZyklen"  Content="{Binding StringFensterEnergieAkkuZyklen}"  VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="12pt" />
+
+                    <Label Grid.Column="11" Grid.ColumnSpan="2" Grid.Row="7"  Name="FensterAkkuEnergieWpvonPv"  Content="{Binding StringFensterEnergieWpVonPvAkku}"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12pt" />
+                    <Label Grid.Column="13" Grid.ColumnSpan="2" Grid.Row="7"  Name="FensterAkkuEnergieWpvomNetz"  Content="{Binding StringFensterEnergieWpVomNetz}"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12pt" />
+                    <Label Grid.Column="15" Grid.ColumnSpan="2" Grid.Row="7"  Name="FensterAkkuEnergieEinspeisung"  Content="{Binding StringFensterEnergiePvUeberschuss}"  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="12pt" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Kennlinien" HorizontalAlignment="Left" Width="67">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="95"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="1" Grid.Row="1" Content="Von:" HorizontalAlignment="Right"/>
+                    <Label Grid.Column="5" Grid.Row="1" Content="Bis:" HorizontalAlignment="Right"/>
+
+                    <DatePicker x:Name="DateTimeStartKennlinie" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeStart, Mode=TwoWay}" SelectedDateChanged="DateChanged" />
+                    <DatePicker x:Name="DateTimeEndeKennlinie" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeEnd, Mode=TwoWay}" SelectedDateChanged="DateChanged" />
+
+                    <scottPlot:WpfPlot x:Name="WpfPlotKennlinie" Grid.Column="1"  Grid.ColumnSpan="17" Grid.Row="3"/>
+
+                    <Button  x:Name="ButtonPv" Grid.Column="2"  Grid.Row="5" Content="PV" Margin="5,0,5,0" Background="{Binding BrushPv}" Command="{Binding ButtonTasterCommand}" CommandParameter="Pv" FontSize="14pt" ToolTip="{Binding StringTooltipPv}" />
+                    <Button  x:Name="ButtonWp" Grid.Column="3"  Grid.Row="5" Content="WP" Margin="5,0,5,0" Background="{Binding BrushWp}" Command="{Binding ButtonTasterCommand}" CommandParameter="Wp" FontSize="14pt" ToolTip="{Binding StringTooltipWp}" />
+                    <Button  x:Name="ButtonH0" Grid.Column="4"  Grid.Row="5" Content="H0" Margin="5,0,5,0" Background="{Binding BrushH0}" Command="{Binding ButtonTasterCommand}" CommandParameter="H0" FontSize="14pt" ToolTip="{Binding StringTooltipH0}" />
+                    <Button  x:Name="ButtonG0" Grid.Column="5"  Grid.Row="5" Content="G0" Margin="5,0,5,0" Background="{Binding BrushG0}" Command="{Binding ButtonTasterCommand}" CommandParameter="G0" FontSize="14pt" ToolTip="{Binding StringTooltipG0}" />
+                    <Button  x:Name="ButtonG1" Grid.Column="6"  Grid.Row="5" Content="G1" Margin="5,0,5,0" Background="{Binding BrushG1}" Command="{Binding ButtonTasterCommand}" CommandParameter="G1" FontSize="14pt" ToolTip="{Binding StringTooltipG1}" />
+                    <Button  x:Name="ButtonG2" Grid.Column="7"  Grid.Row="5" Content="G2" Margin="5,0,5,0" Background="{Binding BrushG2}" Command="{Binding ButtonTasterCommand}" CommandParameter="G2" FontSize="14pt" ToolTip="{Binding StringTooltipG2}" />
+                    <Button  x:Name="ButtonG3" Grid.Column="8"  Grid.Row="5" Content="G3" Margin="5,0,5,0" Background="{Binding BrushG3}" Command="{Binding ButtonTasterCommand}" CommandParameter="G3" FontSize="14pt" ToolTip="{Binding StringTooltipG3}" />
+                    <Button  x:Name="ButtonG4" Grid.Column="9"  Grid.Row="5" Content="G4" Margin="5,0,5,0" Background="{Binding BrushG4}" Command="{Binding ButtonTasterCommand}" CommandParameter="G4" FontSize="14pt" ToolTip="{Binding StringTooltipG4}" />
+                    <Button  x:Name="ButtonG5" Grid.Column="10" Grid.Row="5" Content="G5" Margin="5,0,5,0" Background="{Binding BrushG5}" Command="{Binding ButtonTasterCommand}" CommandParameter="G5" FontSize="14pt" ToolTip="{Binding StringTooltipG5}" />
+                    <Button  x:Name="ButtonG6" Grid.Column="11" Grid.Row="5" Content="G6" Margin="5,0,5,0" Background="{Binding BrushG6}" Command="{Binding ButtonTasterCommand}" CommandParameter="G6" FontSize="14pt" ToolTip="{Binding StringTooltipG6}" />
+                    <Button  x:Name="ButtonL0" Grid.Column="12" Grid.Row="5" Content="L0" Margin="5,0,5,0" Background="{Binding BrushL0}" Command="{Binding ButtonTasterCommand}" CommandParameter="L0" FontSize="14pt" ToolTip="{Binding StringTooltipL0}" />
+                    <Button  x:Name="ButtonL1" Grid.Column="13" Grid.Row="5" Content="L1" Margin="5,0,5,0" Background="{Binding BrushL1}" Command="{Binding ButtonTasterCommand}" CommandParameter="L1" FontSize="14pt" ToolTip="{Binding StringTooltipL1}" />
+                    <Button  x:Name="ButtonL2" Grid.Column="14" Grid.Row="5" Content="L2" Margin="5,0,5,0" Background="{Binding BrushL2}" Command="{Binding ButtonTasterCommand}" CommandParameter="L2" FontSize="14pt" ToolTip="{Binding StringTooltipL2}" />
+
+                    <Label Grid.Column="1" Grid.Row="7" Content="Energie [kWh]"  />
+                    <TextBox Grid.Column=" 2" Grid.Row="7"  Name="EnergiePv" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergiePv, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergiePv}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column=" 3" Grid.Row="7"  Name="EnergieWp" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieWp, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieWp}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column=" 4" Grid.Row="7"  Name="EnergieH0" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieH0, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieH0}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column=" 5" Grid.Row="7"  Name="EnergieG0" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieG0, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieG0}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column=" 6" Grid.Row="7"  Name="EnergieG1" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieG1, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieG1}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column=" 7" Grid.Row="7"  Name="EnergieG2" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieG2, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieG2}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column=" 8" Grid.Row="7"  Name="EnergieG3" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieG3, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieG3}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column=" 9" Grid.Row="7"  Name="EnergieG4" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieG4, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieG4}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column="10" Grid.Row="7"  Name="EnergieG5" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieG5, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieG5}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column="11" Grid.Row="7"  Name="EnergieG6" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieG6, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieG6}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column="12" Grid.Row="7"  Name="EnergieL0" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieL0, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieL0}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
+                    <TextBox Grid.Column="13" Grid.Row="7"  Name="EnergieL1" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieL1, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieL1}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate"  />
+                    <TextBox Grid.Column="14" Grid.Row="7"  Name="EnergieL2" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntJahresenergieL2, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityJahresenergieL2}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate"  />
+
+                    <Label Grid.Column="1" Grid.Row="9" Content="Leistung [kW]"  />
+                    <Label Grid.Column=" 2" Grid.Row="9"  Name="LeistungPv"  Content="{Binding StringJahresMaximalLeistungPv}" Visibility="{Binding VisibilityJahresenergiePv}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column=" 3" Grid.Row="9"  Name="LeistungWp"  Content="{Binding StringJahresMaximalLeistungWp}" Visibility="{Binding VisibilityJahresenergieWp}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column=" 4" Grid.Row="9"  Name="LeistungH0"  Content="{Binding StringJahresMaximalLeistungH0}" Visibility="{Binding VisibilityJahresenergieH0}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column=" 5" Grid.Row="9"  Name="LeistungG0"  Content="{Binding StringJahresMaximalLeistungG0}" Visibility="{Binding VisibilityJahresenergieG0}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column=" 6" Grid.Row="9"  Name="LeistungG1"  Content="{Binding StringJahresMaximalLeistungG1}" Visibility="{Binding VisibilityJahresenergieG1}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column=" 7" Grid.Row="9"  Name="LeistungG2"  Content="{Binding StringJahresMaximalLeistungG2}" Visibility="{Binding VisibilityJahresenergieG2}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column=" 8" Grid.Row="9"  Name="LeistungG3"  Content="{Binding StringJahresMaximalLeistungG3}" Visibility="{Binding VisibilityJahresenergieG3}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column=" 9" Grid.Row="9"  Name="LeistungG4"  Content="{Binding StringJahresMaximalLeistungG4}" Visibility="{Binding VisibilityJahresenergieG4}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column="10" Grid.Row="9"  Name="LeistungG5"  Content="{Binding StringJahresMaximalLeistungG5}" Visibility="{Binding VisibilityJahresenergieG5}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column="11" Grid.Row="9"  Name="LeistungG6"  Content="{Binding StringJahresMaximalLeistungG6}" Visibility="{Binding VisibilityJahresenergieG6}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column="12" Grid.Row="9"  Name="LeistungL0"  Content="{Binding StringJahresMaximalLeistungL0}" Visibility="{Binding VisibilityJahresenergieL0}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column="13" Grid.Row="9"  Name="LeistungL1"  Content="{Binding StringJahresMaximalLeistungL1}" Visibility="{Binding VisibilityJahresenergieL1}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+                    <Label Grid.Column="14" Grid.Row="9"  Name="LeistungL2"  Content="{Binding StringJahresMaximalLeistungL2}" Visibility="{Binding VisibilityJahresenergieL2}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" />
+
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -17,7 +17,7 @@ public class Umrechnungen
         _ = anzahlByte;
         _ = zahlensystem;
 
-        return ("", new ObservableCollection<HornerSchema>());
+        return ("", []);
     }
     public static (string sHex, ObservableCollection<HornerSchema> horner) DezimalToHexadezimal(int zahl, int anzahlByte, Zahlensystem zahlensystem)
     {
@@ -25,6 +25,6 @@ public class Umrechnungen
         _ = anzahlByte;
         _ = zahlensystem;
 
-        return ("", new ObservableCollection<HornerSchema>());
+        return ("", []);
     }
 }
