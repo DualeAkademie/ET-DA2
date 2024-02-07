@@ -1,0 +1,131 @@
+﻿<Window x:Class="Projekt2001.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Projekt2001.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
+        mc:Ignorable="d"
+        Title="Projekt 2001: Vier gewinnt" Height="940" Width="750">
+
+    <Window.Resources>
+        <Style x:Key="BtnRound" TargetType="Button">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+
+        <Rectangle Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="2" Grid.RowSpan="7" Fill="LightGray"  />
+
+        <Button Style="{StaticResource BtnRound}"  Grid.Column="1" Grid.Row="1" Grid.RowSpan="8" Background="{Binding Brush0}" Margin="{Binding Thickness0}" Visibility="{Binding Visibility0}" Command="{Binding ButtonCommand}" CommandParameter="0" />
+        <Button Style="{StaticResource BtnRound}"  Grid.Column="2" Grid.Row="1" Grid.RowSpan="8" Background="{Binding Brush1}" Margin="{Binding Thickness1}" Visibility="{Binding Visibility1}" Command="{Binding ButtonCommand}" CommandParameter="1" />
+        <Button Style="{StaticResource BtnRound}"  Grid.Column="3" Grid.Row="1" Grid.RowSpan="8" Background="{Binding Brush2}" Margin="{Binding Thickness2}" Visibility="{Binding Visibility2}" Command="{Binding ButtonCommand}" CommandParameter="2" />
+        <Button Style="{StaticResource BtnRound}"  Grid.Column="4" Grid.Row="1" Grid.RowSpan="8" Background="{Binding Brush3}" Margin="{Binding Thickness3}" Visibility="{Binding Visibility3}" Command="{Binding ButtonCommand}" CommandParameter="3" />
+        <Button Style="{StaticResource BtnRound}"  Grid.Column="5" Grid.Row="1" Grid.RowSpan="8" Background="{Binding Brush4}" Margin="{Binding Thickness4}" Visibility="{Binding Visibility4}" Command="{Binding ButtonCommand}" CommandParameter="4" />
+        <Button Style="{StaticResource BtnRound}"  Grid.Column="6" Grid.Row="1" Grid.RowSpan="8" Background="{Binding Brush5}" Margin="{Binding Thickness5}" Visibility="{Binding Visibility5}" Command="{Binding ButtonCommand}" CommandParameter="5" />
+        <Button Style="{StaticResource BtnRound}"  Grid.Column="7" Grid.Row="1" Grid.RowSpan="8" Background="{Binding Brush6}" Margin="{Binding Thickness6}" Visibility="{Binding Visibility6}" Command="{Binding ButtonCommand}" CommandParameter="6" />
+
+
+
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness00}" Fill="{Binding Brush00}" Visibility="{Binding Visibility00}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness01}" Fill="{Binding Brush01}" Visibility="{Binding Visibility01}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness02}" Fill="{Binding Brush02}" Visibility="{Binding Visibility02}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness03}" Fill="{Binding Brush03}" Visibility="{Binding Visibility03}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness04}" Fill="{Binding Brush04}" Visibility="{Binding Visibility04}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness05}" Fill="{Binding Brush05}" Visibility="{Binding Visibility05}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness06}" Fill="{Binding Brush06}" Visibility="{Binding Visibility06}"  />
+
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness10}" Fill="{Binding Brush10}" Visibility="{Binding Visibility10}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness11}" Fill="{Binding Brush11}" Visibility="{Binding Visibility11}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness12}" Fill="{Binding Brush12}" Visibility="{Binding Visibility12}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness13}" Fill="{Binding Brush13}" Visibility="{Binding Visibility13}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness14}" Fill="{Binding Brush14}" Visibility="{Binding Visibility14}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness15}" Fill="{Binding Brush15}" Visibility="{Binding Visibility15}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness16}" Fill="{Binding Brush16}" Visibility="{Binding Visibility16}"  />
+
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness20}" Fill="{Binding Brush20}" Visibility="{Binding Visibility20}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness21}" Fill="{Binding Brush21}" Visibility="{Binding Visibility21}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness22}" Fill="{Binding Brush22}" Visibility="{Binding Visibility22}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness23}" Fill="{Binding Brush23}" Visibility="{Binding Visibility23}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness24}" Fill="{Binding Brush24}" Visibility="{Binding Visibility24}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness25}" Fill="{Binding Brush25}" Visibility="{Binding Visibility25}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness26}" Fill="{Binding Brush26}" Visibility="{Binding Visibility26}"  />
+
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness30}" Fill="{Binding Brush30}" Visibility="{Binding Visibility30}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness31}" Fill="{Binding Brush31}" Visibility="{Binding Visibility31}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness32}" Fill="{Binding Brush32}" Visibility="{Binding Visibility32}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness33}" Fill="{Binding Brush33}" Visibility="{Binding Visibility33}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness34}" Fill="{Binding Brush34}" Visibility="{Binding Visibility34}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness35}" Fill="{Binding Brush35}" Visibility="{Binding Visibility35}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness36}" Fill="{Binding Brush36}" Visibility="{Binding Visibility36}"  />
+
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness40}" Fill="{Binding Brush40}" Visibility="{Binding Visibility40}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness41}" Fill="{Binding Brush41}" Visibility="{Binding Visibility41}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness42}" Fill="{Binding Brush42}" Visibility="{Binding Visibility42}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness43}" Fill="{Binding Brush43}" Visibility="{Binding Visibility43}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness44}" Fill="{Binding Brush44}" Visibility="{Binding Visibility44}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness45}" Fill="{Binding Brush45}" Visibility="{Binding Visibility45}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness46}" Fill="{Binding Brush46}" Visibility="{Binding Visibility46}"  />
+
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness50}" Fill="{Binding Brush50}" Visibility="{Binding Visibility50}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness51}" Fill="{Binding Brush51}" Visibility="{Binding Visibility51}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness52}" Fill="{Binding Brush52}" Visibility="{Binding Visibility52}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness53}" Fill="{Binding Brush53}" Visibility="{Binding Visibility53}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness54}" Fill="{Binding Brush54}" Visibility="{Binding Visibility54}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness55}" Fill="{Binding Brush55}" Visibility="{Binding Visibility55}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness56}" Fill="{Binding Brush56}" Visibility="{Binding Visibility56}"  />
+
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness60}" Fill="{Binding Brush60}" Visibility="{Binding Visibility60}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness61}" Fill="{Binding Brush61}" Visibility="{Binding Visibility61}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness62}" Fill="{Binding Brush62}" Visibility="{Binding Visibility62}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness63}" Fill="{Binding Brush63}" Visibility="{Binding Visibility63}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness64}" Fill="{Binding Brush64}" Visibility="{Binding Visibility64}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness65}" Fill="{Binding Brush65}" Visibility="{Binding Visibility65}"  />
+        <Ellipse  Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="1" Grid.RowSpan="8" Margin="{Binding Thickness66}" Fill="{Binding Brush66}" Visibility="{Binding Visibility66}"  />
+
+
+        <Rectangle Grid.Column="1" Grid.Row="2" Grid.RowSpan="7" Fill="CornflowerBlue" Margin="0,0,95,0" />
+        <Rectangle Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="7" Fill="CornflowerBlue" Margin="95,0,95,0" />
+        <Rectangle Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="7" Fill="CornflowerBlue" Margin="95,0,95,0" />
+        <Rectangle Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="7" Fill="CornflowerBlue" Margin="95,0,95,0" />
+        <Rectangle Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="7" Fill="CornflowerBlue" Margin="95,0,95,0" />
+        <Rectangle Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="7" Fill="CornflowerBlue" Margin="95,0,95,0" />
+        <Rectangle Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="7" Fill="CornflowerBlue" Margin="95,0,95,0" />
+        <Rectangle Grid.Column="7" Grid.Row="2" Grid.RowSpan="7" Fill="CornflowerBlue" Margin="95,0,0,0" />
+        <Rectangle Grid.Column="1" Grid.ColumnSpan="7" Grid.Row="8"  Fill="CornflowerBlue" Margin="0,95,0,0" />
+
+        <Button Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="10"  Content="Neustart" Background="LawnGreen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32pt"  Command="{Binding ResetCommand}" Width="700"/>
+
+    </Grid>
+</Window>

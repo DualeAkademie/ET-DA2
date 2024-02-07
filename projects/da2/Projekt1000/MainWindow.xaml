@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModel="clr-namespace:Projekt1000.ViewModel"
-        mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
+        mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="800">
 
     <Grid>
