@@ -24,7 +24,7 @@ public class Rex1Testen
         Bildfahrplan bildfahrplan = new Bildfahrplan();
         var haltestellen = bildfahrplan.GetBahnhoefe(trasse);
 
-        Assert.Equal(exp, haltestellen?[id]);
+        Assert.Equal(exp, haltestellen[id]);
     }
 
     [Theory]
@@ -48,6 +48,6 @@ public class Rex1Testen
         Bildfahrplan bildfahrplan = new Bildfahrplan();
         var trassen = bildfahrplan.GetTrasseStrecken(trasse);
 
-        Assert.Equal(exp, trassen?[2 * id]);
+        Assert.Equal(exp, trassen[2 * id]);
     }
 }

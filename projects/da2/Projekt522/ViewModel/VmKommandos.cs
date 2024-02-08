@@ -6,10 +6,8 @@ public partial class ViewModel
 {
     [RelayCommand]
     private void ButtonTaster(string? taster)
+        // ReSharper disable once ArrangeMethodOrOperatorBody
     {
-        if (taster == "S")
-        {
-            //;
-        }
+        _ = taster;
     }
 }

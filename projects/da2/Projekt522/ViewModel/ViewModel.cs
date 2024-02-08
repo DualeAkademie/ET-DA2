@@ -1,8 +1,13 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Windows.Media;
+#pragma warning disable CS0169 // Field is never used
 
 namespace Projekt522.ViewModel;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
 public partial class ViewModel : ObservableObject
 {
     private readonly MainWindow _mainWindow;

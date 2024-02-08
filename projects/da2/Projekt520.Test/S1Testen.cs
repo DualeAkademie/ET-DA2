@@ -37,7 +37,7 @@ public class S1NamenTesten
         Bildfahrplan bildfahrplan = new Bildfahrplan();
         var haltestellen = bildfahrplan.GetBahnhoefe(trasse);
 
-        Assert.Equal(exp, haltestellen?[id]);
+        Assert.Equal(exp, haltestellen[id]);
     }
 
 
@@ -75,6 +75,6 @@ public class S1NamenTesten
         Bildfahrplan bildfahrplan = new Bildfahrplan();
         var trasse = bildfahrplan.GetTrasseStrecken(trassen);
 
-        Assert.Equal(exp, trasse?[2 * id]);
+        Assert.Equal(exp, trasse[2 * id]);
     }
 }

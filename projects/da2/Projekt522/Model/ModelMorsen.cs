@@ -1,5 +1,11 @@
+// ReSharper disable ReturnTypeCanBeNotNullable
+#pragma warning disable CS0649 // Field is never assigned to, and will always have its default value
 namespace Projekt522.Model;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
 public class ModelMorsen
 {
     private const char Symbolabstand = ' ';
@@ -67,7 +73,7 @@ public class ModelMorsen
     public List<(char zeichen, string morsecode)>? GetMorsecodeSaetze(string? s)
     {
         _ = s;
-        return [];
+        return []!;
     }
     public List<(char zeichen, string morsecode)>? GetMorsecodeListe() => _morseCodeListe;
 }

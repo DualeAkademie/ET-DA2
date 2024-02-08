@@ -2,9 +2,14 @@ using Newtonsoft.Json;
 using Projekt521.Daten;
 using System.IO;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
+
 namespace Projekt521.Model;
 
-public class AlleDaten
+public partial class AlleDaten
 {
     public enum LeistungsProfile
     {
@@ -58,5 +63,4 @@ public class AlleDaten
         }
 
     }
-
 }

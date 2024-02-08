@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:viewModel1="clr-namespace:Projekt520.ViewModel"
-        xmlns:scottPlot="clr-namespace:ScottPlot;assembly=ScottPlot.WPF"
-        d:DataContext="{d:DesignInstance Type=viewModel1:ViewModel}"
+        xmlns:wpf="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
+        xmlns:viewModel="clr-namespace:Projekt520.ViewModel"
         mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
         Title="Projekt 520: Bildfahrplan"  Height="850" Width="1350">
     <Grid >
 
@@ -59,7 +59,7 @@
                         <RowDefinition Height="10"/>
                     </Grid.RowDefinitions>
 
-                    <scottPlot:WpfPlot x:Name="WpfPlotWegZeit" Grid.Column="1" Grid.ColumnSpan="18" Grid.Row="1" />
+                    <wpf:WpfPlot x:Name="WpfPlotWegZeit" Grid.Column="1" Grid.ColumnSpan="18" Grid.Row="1" />
 
                     <Label Grid.Column="1" Grid.Row="2" Content="S1 ↓" FontSize="14pt"/>
                     <Label Grid.Column="1" Grid.Row="4" Content="S1 ↑" FontSize="14pt"/>
@@ -173,7 +173,7 @@
                         <RowDefinition Height="10"/>
                     </Grid.RowDefinitions>
 
-                    <scottPlot:WpfPlot x:Name="WpfPlotWegGeschwindigkeit" Grid.Column="1" Grid.ColumnSpan="18" Grid.Row="1" />
+                    <wpf:WpfPlot x:Name="WpfPlotWegGeschwindigkeit" Grid.Column="1" Grid.ColumnSpan="18" Grid.Row="1" />
 
                     <Label Grid.Column="1" Grid.Row="2" Content="S1 ↓" FontSize="14pt"/>
                     <Label Grid.Column="1" Grid.Row="4" Content="S1 ↑" FontSize="14pt"/>

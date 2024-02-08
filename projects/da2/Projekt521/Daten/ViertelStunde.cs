@@ -1,5 +1,10 @@
 using static Projekt521.Model.AlleDaten;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
+
 namespace Projekt521.Daten;
 
 public class ViertelStunde(DateTime dateTime)

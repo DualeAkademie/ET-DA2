@@ -2,6 +2,11 @@ using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using System.Globalization;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
+
 namespace Projekt521.Daten;
 
 public class PvWp

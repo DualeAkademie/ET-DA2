@@ -1,21 +1,20 @@
 using ScottPlot;
-using System.Drawing;
-using System.Windows;
 
 namespace Projekt520.ViewModel;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
 public partial class ViewModel
 {
-    private void UpdatePlotWindowWegGeschwindigkeit() =>
-        Application.Current.Dispatcher.Invoke(() =>
-        {
-            var legend = _mainWindow.WpfPlotWegGeschwindigkeit.Plot.Legend();
-            legend.Location = Alignment.UpperCenter;
+    private void UpdatePlotWindowWegGeschwindigkeit()
+    {
+        if (_mainWindow.WpfPlotWegGeschwindigkeit?.Plot == null) { return; }
 
-            _mainWindow.WpfPlotWegGeschwindigkeit.Refresh();
-        });
-
-    private void GeschwindigkeitZeichnen(bool boolTrasse, IReadOnlyList<double>? geschwindigkeit, IReadOnlyList<double>? trasse, Color color, Color colorBorder)
+     
+    }
+    private static void GeschwindigkeitZeichnen(Plot plot, bool boolTrasse, IReadOnlyList<double>? geschwindigkeit, IReadOnlyList<double>? trasse, Color color, Color colorBorder)
     {
         if (!boolTrasse) { return; }
         if (geschwindigkeit == null || trasse == null) { return; }
@@ -24,22 +23,10 @@ public partial class ViewModel
 
         for (var i = 0; i < anzahlDatenpunkte - 1; i++)
         {
-            var rectangle = _mainWindow.WpfPlotWegGeschwindigkeit.Plot.AddRectangle(trasse[1 + 2 * i], trasse[2 + 2 * i], 0, geschwindigkeit[2 + 2 * i]);
-            rectangle.BorderColor = colorBorder;
-            rectangle.BorderLineWidth = 3;
-            rectangle.Color = color;
+            var rectangle = plot.Add.Rectangle(trasse[1 + 2 * i], trasse[2 + 2 * i], 0, geschwindigkeit[2 + 2 * i]);
+            rectangle.LineStyle.Color = colorBorder;
+            rectangle.LineStyle.Width = 3;
+            rectangle.FillStyle.Color = color;
         }
-    }
-
-    private void CrosshairZeichnenWegGeschwindigkeit(string? name)
-    {
-        if (_bildfahrplan == null || name == null) { return; }
-
-        var pos = _bildfahrplan.PosBestimmen(name);
-        var ch = _mainWindow.WpfPlotWegGeschwindigkeit.Plot.AddCrosshair(pos, 0);
-        ch.HorizontalLine.LineWidth = 0;
-        ch.VerticalLine.LineWidth = 2;
-
-        _ = _mainWindow.WpfPlotWegGeschwindigkeit.Plot.AddText(name, pos, 0);
     }
 }

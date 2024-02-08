@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
         xmlns:viewModel="clr-namespace:Projekt521.ViewModel"
-        xmlns:scottPlot="clr-namespace:ScottPlot;assembly=ScottPlot.WPF"
         d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
         mc:Ignorable="d"
         Title="Projekt 521: Photovoltaik" Height="850" Width="1350">
@@ -62,7 +62,7 @@
                     <DatePicker x:Name="DateTimeStart0" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeStart, Mode=TwoWay}" SelectedDateChanged="DateChanged"  />
                     <DatePicker x:Name="DateTimeEnde0" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeEnd, Mode=TwoWay}" SelectedDateChanged="DateChanged" Margin="0,0,10,0" />
 
-                    <scottPlot:WpfPlot x:Name="WpfPlotPvWp" Grid.Column="1"  Grid.ColumnSpan="18" Grid.Row="3"/>
+                    <wpf:WpfPlot x:Name="WpfPlotPvWp" Grid.Column="1"  Grid.ColumnSpan="18" Grid.Row="3"/>
 
                     <Button  x:Name="ButtonPvWpPv" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Content="PV" Margin="5,10,5,0" Background="{Binding BrushPv}" Command="{Binding ButtonTasterCommand}" CommandParameter="Pv" FontSize="14pt" ToolTip="{Binding StringTooltipPv}" Grid.RowSpan="2"   />
                     <Button  x:Name="ButtonPvWpWp" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4" Content="WP" Margin="5,10,5,0" Background="{Binding BrushWp}" Command="{Binding ButtonTasterCommand}" CommandParameter="Wp" FontSize="14pt"  ToolTip="{Binding StringTooltipWp}" Grid.RowSpan="2" />
@@ -128,7 +128,7 @@
                     <Label Grid.Column="12" Grid.Row="1" Content="Leistung [W]" Grid.ColumnSpan="2"  />
                     <TextBox Grid.Column="13" Grid.Row="1"  Name="LeistungAkku" PreviewTextInput="NumberValidationTextBox" Text="{Binding IntLeistungAkku, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5,0,5,0" FontSize="12pt" TextChanged="SollwerteUpdate" />
 
-                    <scottPlot:WpfPlot x:Name="WpfPlotAkku" Grid.Column="1"  Grid.ColumnSpan="17" Grid.Row="3"/>
+                    <wpf:WpfPlot x:Name="WpfPlotAkku" Grid.Column="1"  Grid.ColumnSpan="17" Grid.Row="3"/>
 
                     <Button  x:Name="ButtonAkkuPv" Grid.Column="1" Grid.ColumnSpan="2"  Grid.Row="5" Content="PV" Margin="5,0,5,0" Background="{Binding BrushPv}" Command="{Binding ButtonTasterCommand}" CommandParameter="Pv" FontSize="14pt" ToolTip="{Binding StringTooltipPv}" />
                     <Button  x:Name="ButtonAkkuWp" Grid.Column="3" Grid.ColumnSpan="2"  Grid.Row="5" Content="WP" Margin="5,0,5,0" Background="{Binding BrushWp}" Command="{Binding ButtonTasterCommand}" CommandParameter="Wp" FontSize="14pt" ToolTip="{Binding StringTooltipWp}" />
@@ -190,7 +190,7 @@
                     <DatePicker x:Name="DateTimeStartKennlinie" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeStart, Mode=TwoWay}" SelectedDateChanged="DateChanged" />
                     <DatePicker x:Name="DateTimeEndeKennlinie" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="1" DisplayDateStart="2022-1-1" DisplayDateEnd="2022-12-31" SelectedDate="{Binding DateTimeEnd, Mode=TwoWay}" SelectedDateChanged="DateChanged" />
 
-                    <scottPlot:WpfPlot x:Name="WpfPlotKennlinie" Grid.Column="1"  Grid.ColumnSpan="17" Grid.Row="3"/>
+                    <wpf:WpfPlot x:Name="WpfPlotKennlinie" Grid.Column="1"  Grid.ColumnSpan="17" Grid.Row="3"/>
 
                     <Button  x:Name="ButtonPv" Grid.Column="2"  Grid.Row="5" Content="PV" Margin="5,0,5,0" Background="{Binding BrushPv}" Command="{Binding ButtonTasterCommand}" CommandParameter="Pv" FontSize="14pt" ToolTip="{Binding StringTooltipPv}" />
                     <Button  x:Name="ButtonWp" Grid.Column="3"  Grid.Row="5" Content="WP" Margin="5,0,5,0" Background="{Binding BrushWp}" Command="{Binding ButtonTasterCommand}" CommandParameter="Wp" FontSize="14pt" ToolTip="{Binding StringTooltipWp}" />

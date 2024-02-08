@@ -3,7 +3,108 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
+        xmlns:viewModel="clr-namespace:Projekt511.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
         mc:Ignorable="d"
-        Title="Projekt 511" Height="450" Width="800">
-    <Grid />
+        Title="Projekt 511" Height="650" Width="1200">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Column="1" Grid.Row="1">
+            <TabItem Header="Einzelne Texte">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="160"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Column="1" Grid.Row="1"  Command="{Binding ButtonTasterCommand}" CommandParameter="Text" >Text öffnen</Button>
+                    <Label Grid.Column="2" Grid.Row="1" Content="{Binding StringAnzahlZeichen}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                    <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" BorderThickness="1" BorderBrush="Black">
+                        <ScrollViewer>
+                            <TextBlock Text="{Binding StringKompletterText}" TextWrapping="Wrap" Height="494"  />
+                        </ScrollViewer>
+                    </Border>
+
+                    <DataGrid  Grid.Column="4"  Grid.Row="3" ItemsSource="{Binding StatistiksText}"   />
+
+                    <wpf:WpfPlot x:Name="WpfPlotText" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem  Header="Einzelnes Werk">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="310"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="33*"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="33*"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="33*"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Column="1" Grid.Row="1"  Command="{Binding ButtonTasterCommand}" CommandParameter="Werk"> Werk öffnen</Button>
+                    <Label Grid.Column="2" Grid.Row="1" Content="{Binding StringAnzahlZeichenDe}" VerticalAlignment="Top"    HorizontalAlignment="Left" Margin="10,0,0,0" />
+                    <Label Grid.Column="2" Grid.Row="1" Content="{Binding StringAnzahlZeichenEn}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                    <Label Grid.Column="2" Grid.Row="1" Content="{Binding StringAnzahlZeichenFr}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                    <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" BorderThickness="1" BorderBrush="Black">
+                        <ScrollViewer>
+                            <TextBlock Text="{Binding StringKompletterTextDe}" TextWrapping="Wrap"  />
+                        </ScrollViewer>
+                    </Border>
+                    <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5" BorderThickness="1" BorderBrush="Black">
+                        <ScrollViewer>
+                            <TextBlock Text="{Binding StringKompletterTextEn}" TextWrapping="Wrap"  />
+                        </ScrollViewer>
+                    </Border>
+                    <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7" BorderThickness="1" BorderBrush="Black">
+                        <ScrollViewer>
+                            <TextBlock Text="{Binding StringKompletterTextFr}" TextWrapping="Wrap"  />
+                        </ScrollViewer>
+                    </Border>
+                    <DataGrid  Grid.Column="4"  Grid.Row="3" ItemsSource="{Binding StatistiksWerk}" Grid.RowSpan="5"  />
+
+                    <wpf:WpfPlot x:Name="WpfPlotWerk" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="5"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
 </Window>

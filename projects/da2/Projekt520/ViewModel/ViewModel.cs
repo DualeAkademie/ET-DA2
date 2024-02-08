@@ -1,6 +1,12 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using Projekt520.Model;
-using System.Windows;
+#pragma warning disable CS0169 // Field is never used
+#pragma warning disable CS0414 // Field is assigned but its value is never used
+
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
 
 namespace Projekt520.ViewModel;
 
@@ -13,15 +19,28 @@ public partial class ViewModel : ObservableObject
 
     private readonly double[]? _doubleS1Strecke;
     private readonly double[]? _doubleRex1Strecke;
-
+    private double[]? _doubleS1Sued1;
+    private double[]? _doubleS1Sued2;
+    private double[]? _doubleS1Sued3;
+    private double[]? _doubleS1Sued4;
+    private double[]? _doubleS1Nord1;
+    private double[]? _doubleS1Nord2;
+    private double[]? _doubleS1Nord3;
+    private double[]? _doubleS1Nord4;
+    private double[]? _doubleRex1Sued1;
+    private double[]? _doubleRex1Sued2;
+    private double[]? _doubleRex1Sued3;
+    private double[]? _doubleRex1Sued4;
+    private double[]? _doubleRex1Nord1;
+    private double[]? _doubleRex1Nord2;
+    private double[]? _doubleRex1Nord3;
+    private double[]? _doubleRex1Nord4;
 
     public ViewModel(Bildfahrplan? bildfahrplan, MainWindow mainWindow, CancellationTokenSource cancellationTokenSource)
     {
         _bildfahrplan = bildfahrplan;
         _mainWindow = mainWindow;
 
-        _doubleS1Strecke = _bildfahrplan?.GetTrasseStrecken(Bildfahrplan.Trassen.S1Nord);
-        _doubleRex1Strecke = _bildfahrplan?.GetTrasseStrecken(Bildfahrplan.Trassen.Rex1Nord);
 
         //  BoolS1Sued1 = true;
         //  BoolS1Sued2 = true;
@@ -66,19 +85,35 @@ public partial class ViewModel : ObservableObject
     {
         while (!cancellationToken.IsCancellationRequested)
         {
+            if (!BoolS1Sued1)
+            {
+                BoolS1Sued2 = false;
+                BoolS1Sued3 = false;
+                BoolS1Sued4 = false;
+            }
+
+            if (!BoolS1Nord1)
+            {
+                BoolS1Nord2 = false;
+                BoolS1Nord3 = false;
+                BoolS1Nord4 = false;
+            }
+
+            if (!BoolRex1Sued1)
+            {
+                BoolRex1Sued2 = false;
+                BoolRex1Sued3 = false;
+                BoolRex1Sued4 = false;
+            }
+
+            if (!BoolRex1Nord1)
+            {
+                BoolRex1Nord2 = false;
+                BoolRex1Nord3 = false;
+                BoolRex1Nord4 = false;
+            }
 
             Thread.Sleep(100);
         }
     }
-    public void UpdatePlotWindow(int selectedIndex)
-    {
-        _wegZeitDiagrammAktiv = selectedIndex == 0;
-        UpdateWindow();
-    }
-    public void UpdateWindow()
-    {
-        if (_wegZeitDiagrammAktiv) { UpdatePlotWindowWegZeit(); }
-        else { UpdatePlotWindowWegGeschwindigkeit(); }
-    }
-    private static Visibility Sichtbarkeit(bool b) => b ? Visibility.Visible : Visibility.Collapsed;
 }

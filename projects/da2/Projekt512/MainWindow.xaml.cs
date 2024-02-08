@@ -23,10 +23,7 @@ public partial class MainWindow
 
     internal void Winkel3Geaendert(object sender, SelectionChangedEventArgs args)
     {
-        if ((sender as ComboBox)?.SelectedItem is not ComboBoxItem cBoxItem)
-        {
-            return;
-        }
+        if ((sender as ComboBox)?.SelectedItem is not ComboBoxItem cBoxItem) { return; }
 
         var content = cBoxItem.Content.ToString();
         _ = Enum.TryParse(content?.Remove(content.Length - 1, 1), true, out Model.BildDrehen.Winkel winkel);
@@ -36,10 +33,7 @@ public partial class MainWindow
 
     internal void Winkel4Geaendert(object sender, SelectionChangedEventArgs args)
     {
-        if ((sender as ComboBox)?.SelectedItem is not ComboBoxItem cBoxItem)
-        {
-            return;
-        }
+        if ((sender as ComboBox)?.SelectedItem is not ComboBoxItem cBoxItem) { return; }
 
         var content = cBoxItem.Content.ToString();
         _ = Enum.TryParse(content?.Remove(content.Length - 1, 1), true, out Model.BildDrehen.Winkel winkel);
@@ -48,10 +42,7 @@ public partial class MainWindow
     }
     internal void Winkel5Geaendert(object sender, SelectionChangedEventArgs args)
     {
-        if ((sender as ComboBox)?.SelectedItem is not ComboBoxItem cBoxItem)
-        {
-            return;
-        }
+        if ((sender as ComboBox)?.SelectedItem is not ComboBoxItem cBoxItem) { return; }
 
         var content = cBoxItem.Content.ToString();
         _ = Enum.TryParse(content?.Remove(content.Length - 1, 1), true, out Model.BildDrehen.Winkel winkel);
@@ -60,10 +51,7 @@ public partial class MainWindow
     }
     internal void Winkel6Geaendert(object sender, SelectionChangedEventArgs args)
     {
-        if ((sender as ComboBox)?.SelectedItem is not ComboBoxItem cBoxItem)
-        {
-            return;
-        }
+        if ((sender as ComboBox)?.SelectedItem is not ComboBoxItem cBoxItem) { return; }
 
         var content = cBoxItem.Content.ToString();
         _ = Enum.TryParse(content?.Remove(content.Length - 1, 1), true, out Model.BildDrehen.Winkel winkel);

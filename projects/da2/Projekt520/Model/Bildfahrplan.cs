@@ -1,4 +1,10 @@
+using Newtonsoft.Json;
 using Projekt520.Daten;
+using System.IO;
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
 
 namespace Projekt520.Model;
 
@@ -14,25 +20,32 @@ public partial class Bildfahrplan
 
     public Bahnstrecke? Bahnstrecke { get; set; }
     public Fahrplanbild? Fahrplanbild { get; set; }
-    
-    // ReSharper disable once EmptyConstructor
+
+
     public Bildfahrplan()
     {
-        // Bahnstrecke
+        try
+        {
+            Bahnstrecke = JsonConvert.DeserializeObject<Bahnstrecke>(File.ReadAllText(@"Daten\Bahnstrecke_Lindau_Bludenz.json"));
+            Fahrplanbild = JsonConvert.DeserializeObject<Fahrplanbild>(File.ReadAllText(@"Daten\\Fahrplanbilder.json"));
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
-    public double[]? GetTrasseStrecken(Trassen trasse)
+
+    public double[] GetTrasseStrecken(Trassen trasse)
     {
         _ = trasse;
-        return null;
+        return null!;
     }
-    public double PosBestimmen(string? name)
-    {
-        _ = name;
-        return 0;
-    }
-    public List<string>? GetBahnhoefe(Trassen trasse)
+
+    public List<string> GetBahnhoefe(Trassen trasse)
     {
         _ = trasse;
-        return null;
+        return null!;
     }
 }

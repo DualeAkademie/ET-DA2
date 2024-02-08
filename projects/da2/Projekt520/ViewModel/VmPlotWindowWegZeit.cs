@@ -1,46 +1,36 @@
 using ScottPlot;
 using System.Windows;
 
+// ReSharper disable UnusedMember.Global
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable UnusedMember.Local
+
 namespace Projekt520.ViewModel;
 public partial class ViewModel
 {
     private void UpdatePlotWindowWegZeit()
     {
-   
+        if (_mainWindow.WpfPlotWegZeit?.Plot == null) { return; }
 
-        if (_mainWindow.WpfPlotWegZeit == null) { return; }
-
-        Application.Current.Dispatcher.Invoke(_mainWindow.WpfPlotWegZeit.Reset);
-
-      
+        _ = Application.Current.Dispatcher.Invoke(_mainWindow.WpfPlotWegZeit.Reset);
+        var plot = _mainWindow.WpfPlotWegZeit.Plot;
 
         Application.Current.Dispatcher.Invoke(() =>
-        {
-            var legend = _mainWindow.WpfPlotWegZeit.Plot.Legend();
-            legend.Location = Alignment.UpperCenter;
-
-            _mainWindow.WpfPlotWegZeit.Refresh();
-        });
+       {
+           plot.Legend.Location = Alignment.UpperCenter;
+           _mainWindow.WpfPlotWegZeit.Refresh();
+       });
     }
-
-    private void CrosshairZeichnenWegZeit(string? name)
-    {
-        if (_bildfahrplan == null || name == null) { return; }
-
-        var pos = _bildfahrplan.PosBestimmen(name);
-        var ch = _mainWindow.WpfPlotWegZeit.Plot.AddCrosshair(pos, 0);
-        ch.HorizontalLine.LineWidth = 0;
-        ch.VerticalLine.LineWidth = 2;
-
-        _ = _mainWindow.WpfPlotWegZeit.Plot.AddText(name, pos, 0);
-    }
-
-    private void BahntrasseZeichnen(bool boolTrasse, double[]? fahrzeiten, double[]? trasse, string legende, LineStyle lineStyle)
+    private static void BahntrasseZeichnen(Plot plot, bool boolTrasse, double[]? fahrzeiten, double[]? trasse, string legende, bool linieDurchgezogen)
     {
         if (!boolTrasse) { return; }
+        if (fahrzeiten == null || trasse == null) { return; }
 
-        var line = _mainWindow.WpfPlotWegZeit.Plot.AddScatter(trasse, fahrzeiten);
+        LinePattern[] patterns = Enum.GetValues<LinePattern>();
+
+        var line = plot.Add.Scatter(trasse, fahrzeiten);
         line.Label = legende;
-        line.LineStyle = lineStyle;
+        line.LineStyle.Pattern = linieDurchgezogen ? patterns[0] : patterns[1];
     }
 }
