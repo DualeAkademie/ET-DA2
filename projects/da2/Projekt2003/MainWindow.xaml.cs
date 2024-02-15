@@ -9,7 +9,7 @@ public partial class MainWindow
     public MainWindow()
     {
         CancellationTokenSource = new CancellationTokenSource();
-        Model = new Model.Model();
+        Model = new Model.Model(this);
         ViewModel = new ViewModel.ViewModel(Model, CancellationTokenSource);
 
         InitializeComponent();

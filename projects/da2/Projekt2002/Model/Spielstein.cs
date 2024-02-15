@@ -1,9 +1,9 @@
+using System.Windows;
+
 namespace Projekt2002.Model;
 
-public class Spielsteine
+public class Spielsteine(int zahl)
 {
-    // ReSharper disable once EmptyConstructor
-    public Spielsteine()
-    {
-    }
+    private Visibility _sichtbarkeit;
+    private string? _zahl = zahl.ToString();
 }

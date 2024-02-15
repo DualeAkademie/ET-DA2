@@ -5,14 +5,8 @@ namespace Projekt2002.ViewModel;
 public partial class ViewModel
 {
     [RelayCommand]
-    private void Button(string? feld)
-    {
-        //
-    }
+    private void Button(string? feld) => _model.MouseClick(feld);
 
     [RelayCommand]
-    private void Reset()
-    {
-        //
-    }
+    private void Reset() => _model.PuzzleDurchmischen();
 }

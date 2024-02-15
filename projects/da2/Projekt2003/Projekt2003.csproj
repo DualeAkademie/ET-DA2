@@ -17,4 +17,23 @@
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Pictures\happy-snowman.jpg" />
+    <None Remove="Pictures\HohesRad0.jpg" />
+    <None Remove="Pictures\HohesRad1.jpg" />
+    <None Remove="Pictures\LicenceInfo.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Pictures\LicenceInfo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Pictures\HohesRad0.jpg" />
+    <EmbeddedResource Include="Pictures\HohesRad1.jpg" />
+    <EmbeddedResource Include="Pictures\happy-snowman.jpg" />
+  </ItemGroup>
+
 </Project>

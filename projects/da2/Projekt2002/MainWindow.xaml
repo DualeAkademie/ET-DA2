@@ -51,7 +51,8 @@
         <Button x:Name="Button32" Grid.Column="3" Grid.Row="4"  Content="{Binding String23}" Visibility="{Binding Visibility23}" Background="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32pt" Width="100" Height="100" BorderThickness="5" Command="{Binding ButtonCommand}" CommandParameter="23" />
         <Button x:Name="Button33" Grid.Column="4" Grid.Row="4"  Content="{Binding String33}" Visibility="{Binding Visibility33}" Background="LightGray" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32pt" Width="100" Height="100" BorderThickness="5" Command="{Binding ButtonCommand}" CommandParameter="33" />
 
-        <Button Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="6"  Content="Neustart" Background="LawnGreen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32pt"  Command="{Binding ResetCommand}" Width="400"/>
+        <Button Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="6"  Content="Neustart" Background="LawnGreen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32pt"  Command="{Binding ResetCommand}" Width="300"/>
+        <ComboBox x:Name="ComboBox" Grid.Column="4" Grid.Row="6" SelectedIndex="1" FontSize="32pt" Width="100" ItemsSource="{Binding ItemsList}" />
     </Grid>
 
 </Window>

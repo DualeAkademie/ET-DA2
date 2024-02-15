@@ -6,32 +6,41 @@
         xmlns:viewModel="clr-namespace:Projekt2003.ViewModel"
         d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Projekt 2003: Schiebepuzzle mit Bild" Height="800" Width="640">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
+
+        <Button Grid.Column="1" Grid.Row="1" Visibility="{Binding Visibility00}"  Command="{Binding ButtonCommand}" CommandParameter="00"  ><Image Source="{Binding Image00}"></Image></Button>
+        <Button Grid.Column="2" Grid.Row="1" Visibility="{Binding Visibility10}"  Command="{Binding ButtonCommand}" CommandParameter="10"  ><Image Source="{Binding Image10}"></Image></Button>
+        <Button Grid.Column="3" Grid.Row="1" Visibility="{Binding Visibility20}"  Command="{Binding ButtonCommand}" CommandParameter="20"  ><Image Source="{Binding Image20}"></Image></Button>
+
+        <Button Grid.Column="1" Grid.Row="2" Visibility="{Binding Visibility01}"  Command="{Binding ButtonCommand}" CommandParameter="01"  ><Image Source="{Binding Image01}"></Image></Button>
+        <Button Grid.Column="2" Grid.Row="2" Visibility="{Binding Visibility11}"  Command="{Binding ButtonCommand}" CommandParameter="11"  ><Image Source="{Binding Image11}"></Image></Button>
+        <Button Grid.Column="3" Grid.Row="2" Visibility="{Binding Visibility21}"  Command="{Binding ButtonCommand}" CommandParameter="21"  ><Image Source="{Binding Image21}"></Image></Button>
+
+        <Button Grid.Column="1" Grid.Row="3" Visibility="{Binding Visibility02}"  Command="{Binding ButtonCommand}" CommandParameter="02"  ><Image Source="{Binding Image02}"></Image></Button>
+        <Button Grid.Column="2" Grid.Row="3" Visibility="{Binding Visibility12}"  Command="{Binding ButtonCommand}" CommandParameter="12"  ><Image Source="{Binding Image12}"></Image></Button>
+        <Button Grid.Column="3" Grid.Row="3" Visibility="{Binding Visibility22}"  Command="{Binding ButtonCommand}" CommandParameter="22"  ><Image Source="{Binding Image22}"></Image></Button>
+
+        <Button Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="5"  Content="Neues Bild" Background="LawnGreen" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32pt"  Command="{Binding ResetCommand}" CommandParameter="NeuesBild" Width="600"/>
+        <Button Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="7"  Content="Mischen" Background="Yellow" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32pt"  Command="{Binding ResetCommand}" CommandParameter="Mischen" Width="400" />
+        <ComboBox x:Name="ComboBox" Grid.Column="3" Grid.Row="7"  SelectedIndex="1" FontSize="32pt" Width="200" ItemsSource="{Binding ItemsList}"/>
     </Grid>
 </Window>

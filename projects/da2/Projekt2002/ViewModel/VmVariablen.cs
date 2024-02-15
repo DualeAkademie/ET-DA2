@@ -1,10 +1,13 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Projekt2002.ViewModel;
 
 public partial class ViewModel
 {
+    [ObservableProperty] private ObservableCollection<ComboBoxItem> _itemsList;
 
     [ObservableProperty] private Visibility _visibility00;
     [ObservableProperty] private Visibility _visibility01;
