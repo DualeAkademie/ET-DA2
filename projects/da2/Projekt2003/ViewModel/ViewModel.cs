@@ -1,8 +1,8 @@
 using CommunityToolkit.Mvvm.ComponentModel;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+// ReSharper disable UnusedMember.Local
 
 namespace Projekt2003.ViewModel;
 

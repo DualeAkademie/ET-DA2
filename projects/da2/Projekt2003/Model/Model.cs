@@ -1,7 +1,18 @@
 using System.IO;
 using System.Reflection;
 using System.Windows.Media.Imaging;
+// ReSharper disable RedundantJumpStatement
+// ReSharper disable LocalVariableHidesMember
+// ReSharper disable InconsistentNaming
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 #pragma warning disable CS0169 // Field is never used
+// ReSharper disable UnusedMember.Global
+// ReSharper disable NotAccessedField.Local
+// ReSharper disable MemberCanBeMadeStatic.Local
+// ReSharper disable ArrangeMethodOrOperatorBody
+// ReSharper disable UnusedMember.Local
+// ReSharper disable CollectionNeverUpdated.Local
+#pragma warning disable IDE0022
 
 namespace Projekt2003.Model;
 
