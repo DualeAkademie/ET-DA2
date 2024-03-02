@@ -7,9 +7,15 @@
         xmlns:wpf="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
-        Title="Projekt 523: GPS" Height="800" Width="1000">
+        Title="Projekt 523: GPS" Height="800" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="10"/>
@@ -28,11 +34,20 @@
         </Grid.RowDefinitions>
 
         <Button Grid.Column="1" Grid.Row="1"    Command="{Binding ButtonTasterCommand}" CommandParameter="file" Content="Datei öffnen" />
-        <Label Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" Content="{Binding StringGpsTrackName}" FontSize="16pt" />
+        <Label Grid.Column="3" Grid.ColumnSpan="6" Grid.Row="1" Content="{Binding StringGpsTrackName}" FontSize="16pt" />
 
-        <wpf:WpfPlot Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="3" />
+        <wpf:WpfPlot x:Name="WpfPlot" Grid.Column="1" Grid.ColumnSpan="10" Grid.Row="3" />
 
-        <Button Grid.Column="1" Grid.Row="5"    Command="{Binding ButtonTasterCommand}" CommandParameter="hoehe" Content="Höhenprofil anzeigen" />
-        <Button Grid.Column="3" Grid.Row="5"    Command="{Binding ButtonTasterCommand}" CommandParameter="geschwindigkeit" Content="Geschwindigkeit anzeigen" />
+        <Button Grid.Column="1" Grid.Row="5" Background="{Binding BrushHoehe}" Command="{Binding ButtonTasterCommand}" CommandParameter="hoehe" Content="Höhenprofil" Margin="0,0,105,0"  />
+        <Button Grid.Column="1" Grid.Row="5" Background="{Binding BrushGeschwindigkeit}" Command="{Binding ButtonTasterCommand}" CommandParameter="geschwindigkeit" Content="Geschwindigkeit" Margin="105,0,0,0"  />
+        <Button Grid.Column="3" Grid.Row="5" Background="{Binding BrushBeschleunigung}" Command="{Binding ButtonTasterCommand}" CommandParameter="beschleunigung" Content="Beschleunigung" Margin="0,0,100,0"  />
+        <Button Grid.Column="3" Grid.Row="5" Background="{Binding BrushZeitachse}" Command="{Binding ButtonTasterCommand}" CommandParameter="zeit" Content="→ → Zeit → →" Margin="105,0,0,0"  />
+
+
+        <ComboBox x:Name="ComboBoxAvg" Grid.Column="5" Grid.Row="5" SelectedIndex="0" Width="200" ItemsSource="{Binding ItemsListAvg}" SelectionChanged="ComboBoxAvgChanged" />
+        <Label  Grid.Column="7" Grid.Row="5" Content="Mittelwert:" Visibility="{Binding VisibilityMittelwert}" />
+        <ComboBox x:Name="ComboBoxNum" Grid.Column="7" Grid.Row="4" SelectedIndex="0" ItemsSource="{Binding ItemsListNum}" SelectionChanged="ComboBoxAvgChanged" Visibility="{Binding VisibilityMittelwert}"  Margin="100,10,0,0" Grid.RowSpan="2"  />
+        <Label  Grid.Column="9" Grid.Row="5" Content="Beschleunigung:" Visibility="{Binding VisibilityBeschleunigung}" />
+        <ComboBox x:Name="ComboBoxBeschleunigung" Grid.Column="9" Grid.Row="5" SelectedIndex="0" ItemsSource="{Binding ItemsListBeschleunigung}" SelectionChanged="ComboBoxAvgChanged" Visibility="{Binding VisibilityBeschleunigung}" Margin="100,0,0,0" />
     </Grid>
 </Window>

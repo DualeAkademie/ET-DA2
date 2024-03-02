@@ -1,5 +1,5 @@
 // ReSharper disable UnusedMember.Global
-namespace Projekt523.Model;
+namespace Projekt523.GpxLib;
 
 public class GpxAltimetry(
     double minElevation,
@@ -12,8 +12,11 @@ public class GpxAltimetry(
     public double AvgElevation { get; set; } = avgElevation;
     public IEnumerable<Altimetry> Altimetries { get; set; } = altimetries;
 }
-public class Altimetry(double elevation, double kilometers)
+
+public class Altimetry(DateTime dateTime, double elevation, double kilometers, double speed)
 {
+    public DateTime DateTime { get; set; } = dateTime;
     public double Elevation { get; set; } = elevation;
     public double Kilometers { get; set; } = kilometers;
+    public double Speed { get; set; } = speed;
 }

@@ -4,13 +4,14 @@ using static Projekt2005.Test.ImportExportTesten;
 
 namespace Projekt2005.Test;
 
-public class PfeiltastenTesten(SpielTestenFixture fixture) : IClassFixture<SpielTestenFixture>
+public class PfeiltastenTesten1(SpielTestenFixture fixture) : IClassFixture<SpielTestenFixture>
 {
-
-    //          | 1 |   |   |   |  
-    //          |   | 2 |   |   |
-    //          |   |   | 4 |   |  
-    //          |   |   |   | 8 |
+    //                              {   {       {       {       {   
+    //          | 1 |   |   |   |       1,      0,      0,      0,
+    //          |   | 2 |   |   |       0,      2,      0,      0,
+    //          |   |   | 4 |   |       0,      0,      4,      0,
+    //          |   |   |   | 8 |       0,      0,      0,      8,
+    //                                  },      },      }       }   }   ====> das Array wird { {[0,0] .. [0,3]},     {[1,0] .. [1,3]},       {[2,0] .. [2,3]},       {[3,0] .. [3,3]} }        initialisiert 
 
     private readonly List<int[,]> _alleSpiele =
     [

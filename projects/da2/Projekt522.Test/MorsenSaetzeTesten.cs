@@ -1,7 +1,7 @@
 using System.Text;
 
 namespace Projekt522.Test;
-public class MorsenSaetzeTesten(PvTestenFixture fixture) : IClassFixture<PvTestenFixture>
+public class MorsenSaetzeTesten(MorsenTestenFixture fixture) : IClassFixture<MorsenTestenFixture>
 {
     private const string Buchstabenabstand = "   ";
     private const string Wortabstand = "       ";

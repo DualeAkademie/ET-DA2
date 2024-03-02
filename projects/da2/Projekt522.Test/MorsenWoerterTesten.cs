@@ -1,6 +1,6 @@
 namespace Projekt522.Test;
 
-public class MorsenWoerterTesten(PvTestenFixture fixture) : IClassFixture<PvTestenFixture>
+public class MorsenWoerterTesten(MorsenTestenFixture fixture) : IClassFixture<MorsenTestenFixture>
 {
     private const string Buchstabenabstand = "   ";
 

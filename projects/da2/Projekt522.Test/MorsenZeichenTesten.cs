@@ -2,11 +2,13 @@ using Projekt522.Model;
 
 namespace Projekt522.Test;
 
-public class PvTestenFixture
+public class MorsenTestenFixture
 {
     public ModelMorsen ModelMorsen { get; set; } = new();
 }
-public class MorsenZeichenTesten(PvTestenFixture fixture) : IClassFixture<PvTestenFixture>
+
+
+public class MorsenZeichenTesten(MorsenTestenFixture fixture) : IClassFixture<MorsenTestenFixture>
 {
     [Theory]
     [InlineData("• —", 'A')]

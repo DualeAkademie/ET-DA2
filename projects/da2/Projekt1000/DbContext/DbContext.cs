@@ -15,7 +15,7 @@ public class DbContext
         _context = new ProductContext();
         _context.Database.Migrate();
 
-        if (_context.Categories == null || _context.Products == null) { return; }
+        if (_context.Categories is null || _context.Products is null) { return; }
 
         _context.Categories.Load();
         _context.Products.Load();
@@ -27,7 +27,7 @@ public class DbContext
     }
     public void AenderungenSpeichern()
     {
-        if (_context.Categories == null) { return; }
+        if (_context.Categories is null) { return; }
 
         _ = _context.SaveChanges();
 

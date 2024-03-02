@@ -1,4 +1,5 @@
 using System.Windows.Input;
+// ReSharper disable ArrangeMethodOrOperatorBody
 
 namespace Projekt2005.Model;
 

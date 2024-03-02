@@ -1,3 +1,4 @@
+// ReSharper disable MemberCanBeMadeStatic.Local
 namespace Projekt2005.Model;
 
 public partial class Model
