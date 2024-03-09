@@ -1,0 +1,445 @@
+﻿<Window x:Class="Projekt524.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Projekt524.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewModel:ViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="950">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"  SelectionChanged="TabControl_SelectionChanged">
+
+            <TabItem Header="Vornamen">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="0"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" FontSize="14" Content="Häufigste Namen" />
+
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" FontSize="12" Content="{Binding StringVornameAnzahl00}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" FontSize="12" Content="{Binding StringVornameAnzahl01}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" FontSize="12" Content="{Binding StringVornameAnzahl02}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" Content="{Binding StringVornameAnzahl03}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="6" FontSize="12" Content="{Binding StringVornameAnzahl04}" />
+
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="2" FontSize="12" Content="{Binding StringVornameAnzahl05}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="3" FontSize="12" Content="{Binding StringVornameAnzahl06}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="4" FontSize="12" Content="{Binding StringVornameAnzahl07}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" Content="{Binding StringVornameAnzahl08}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="6" FontSize="12" Content="{Binding StringVornameAnzahl09}" />
+
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="2" FontSize="12" Content="{Binding StringVornameAnzahl10}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3" FontSize="12" Content="{Binding StringVornameAnzahl11}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="4" FontSize="12" Content="{Binding StringVornameAnzahl12}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" Content="{Binding StringVornameAnzahl13}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="6" FontSize="12" Content="{Binding StringVornameAnzahl14}" />
+
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="2" FontSize="12" Content="{Binding StringVornameAnzahl15}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="3" FontSize="12" Content="{Binding StringVornameAnzahl16}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="4" FontSize="12" Content="{Binding StringVornameAnzahl17}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" Content="{Binding StringVornameAnzahl18}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="6" FontSize="12" Content="{Binding StringVornameAnzahl19}" />
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="8" FontSize="14" Content="Namen mit den meisten Selbstlauten (Vokal)" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row=" 9" FontSize="12" Content="{Binding StringVornameSelbstlaut00}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="10" FontSize="12" Content="{Binding StringVornameSelbstlaut01}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="11" FontSize="12" Content="{Binding StringVornameSelbstlaut02}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="12" FontSize="12" Content="{Binding StringVornameSelbstlaut03}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="13" FontSize="12" Content="{Binding StringVornameSelbstlaut04}" />
+                                                                                                                                       
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row=" 9" FontSize="12" Content="{Binding StringVornameSelbstlaut05}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="10" FontSize="12" Content="{Binding StringVornameSelbstlaut06}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="11" FontSize="12" Content="{Binding StringVornameSelbstlaut07}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="12" FontSize="12" Content="{Binding StringVornameSelbstlaut08}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="13" FontSize="12" Content="{Binding StringVornameSelbstlaut09}" />
+                                                                                                                                       
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row=" 9" FontSize="12" Content="{Binding StringVornameSelbstlaut10}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="10" FontSize="12" Content="{Binding StringVornameSelbstlaut11}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="11" FontSize="12" Content="{Binding StringVornameSelbstlaut12}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="12" FontSize="12" Content="{Binding StringVornameSelbstlaut13}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="13" FontSize="12" Content="{Binding StringVornameSelbstlaut14}" />
+                                                                                                                                       
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row=" 9" FontSize="12" Content="{Binding StringVornameSelbstlaut15}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="10" FontSize="12" Content="{Binding StringVornameSelbstlaut16}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="11" FontSize="12" Content="{Binding StringVornameSelbstlaut17}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="12" FontSize="12" Content="{Binding StringVornameSelbstlaut18}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="13" FontSize="12" Content="{Binding StringVornameSelbstlaut19}" />
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="15" FontSize="14" Content="Namen mit den meisten Mitlauten (Konsonanten)" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="16" FontSize="12" Content="{Binding StringVornameMitlaut00}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="17" FontSize="12" Content="{Binding StringVornameMitlaut01}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="18" FontSize="12" Content="{Binding StringVornameMitlaut02}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="19" FontSize="12" Content="{Binding StringVornameMitlaut03}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="20" FontSize="12" Content="{Binding StringVornameMitlaut04}" />
+                                                                                                                                       
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="16" FontSize="12" Content="{Binding StringVornameMitlaut05}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="17" FontSize="12" Content="{Binding StringVornameMitlaut06}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="18" FontSize="12" Content="{Binding StringVornameMitlaut07}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="19" FontSize="12" Content="{Binding StringVornameMitlaut08}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="20" FontSize="12" Content="{Binding StringVornameMitlaut09}" />
+                                                                                                                                        
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="16" FontSize="12" Content="{Binding StringVornameMitlaut10}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="17" FontSize="12" Content="{Binding StringVornameMitlaut11}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="18" FontSize="12" Content="{Binding StringVornameMitlaut12}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="19" FontSize="12" Content="{Binding StringVornameMitlaut13}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="20" FontSize="12" Content="{Binding StringVornameMitlaut14}" />
+                                                                                                                                       
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="16" FontSize="12" Content="{Binding StringVornameMitlaut15}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="17" FontSize="12" Content="{Binding StringVornameMitlaut16}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="18" FontSize="12" Content="{Binding StringVornameMitlaut17}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="19" FontSize="12" Content="{Binding StringVornameMitlaut18}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="20" FontSize="12" Content="{Binding StringVornameMitlaut19}" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Nachnamen">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="0"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" FontSize="14" Content="Häufigste Namen" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" FontSize="12" Content="{Binding StringNachnameAnzahl00}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" FontSize="12" Content="{Binding StringNachnameAnzahl01}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="4" FontSize="12" Content="{Binding StringNachnameAnzahl02}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" Content="{Binding StringNachnameAnzahl03}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="6" FontSize="12" Content="{Binding StringNachnameAnzahl04}" />
+                                                                                                                                    
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="2" FontSize="12" Content="{Binding StringNachnameAnzahl05}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="3" FontSize="12" Content="{Binding StringNachnameAnzahl06}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="4" FontSize="12" Content="{Binding StringNachnameAnzahl07}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" Content="{Binding StringNachnameAnzahl08}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="6" FontSize="12" Content="{Binding StringNachnameAnzahl09}" />
+                                                                                                                                    
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="2" FontSize="12" Content="{Binding StringNachnameAnzahl10}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3" FontSize="12" Content="{Binding StringNachnameAnzahl11}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="4" FontSize="12" Content="{Binding StringNachnameAnzahl12}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" Content="{Binding StringNachnameAnzahl13}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="6" FontSize="12" Content="{Binding StringNachnameAnzahl14}" />
+                                                                                                                                
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="2" FontSize="12" Content="{Binding StringNachnameAnzahl15}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="3" FontSize="12" Content="{Binding StringNachnameAnzahl16}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="4" FontSize="12" Content="{Binding StringNachnameAnzahl17}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="5" FontSize="12" Content="{Binding StringNachnameAnzahl18}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="6" FontSize="12" Content="{Binding StringNachnameAnzahl19}" />
+
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="8" FontSize="14" Content="Namen mit den meisten Selbstlauten (Vokal)" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row=" 9" FontSize="12" Content="{Binding StringNachnameSelbstlaut00}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="10" FontSize="12" Content="{Binding StringNachnameSelbstlaut01}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="11" FontSize="12" Content="{Binding StringNachnameSelbstlaut02}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="12" FontSize="12" Content="{Binding StringNachnameSelbstlaut03}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="13" FontSize="12" Content="{Binding StringNachnameSelbstlaut04}" />
+
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row=" 9" FontSize="12" Content="{Binding StringNachnameSelbstlaut05}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="10" FontSize="12" Content="{Binding StringNachnameSelbstlaut06}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="11" FontSize="12" Content="{Binding StringNachnameSelbstlaut07}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="12" FontSize="12" Content="{Binding StringNachnameSelbstlaut08}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="13" FontSize="12" Content="{Binding StringNachnameSelbstlaut09}" />
+
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row=" 9" FontSize="12" Content="{Binding StringNachnameSelbstlaut10}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="10" FontSize="12" Content="{Binding StringNachnameSelbstlaut11}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="11" FontSize="12" Content="{Binding StringNachnameSelbstlaut12}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="12" FontSize="12" Content="{Binding StringNachnameSelbstlaut13}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="13" FontSize="12" Content="{Binding StringNachnameSelbstlaut14}" />
+
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row=" 9" FontSize="12" Content="{Binding StringNachnameSelbstlaut15}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="10" FontSize="12" Content="{Binding StringNachnameSelbstlaut16}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="11" FontSize="12" Content="{Binding StringNachnameSelbstlaut17}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="12" FontSize="12" Content="{Binding StringNachnameSelbstlaut18}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="13" FontSize="12" Content="{Binding StringNachnameSelbstlaut19}" />
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="15" FontSize="14" Content="Namen mit den meisten Mitlauten (Konsonanten)" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="16" FontSize="12" Content="{Binding StringNachnameMitlaut00}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="17" FontSize="12" Content="{Binding StringNachnameMitlaut01}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="18" FontSize="12" Content="{Binding StringNachnameMitlaut02}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="19" FontSize="12" Content="{Binding StringNachnameMitlaut03}" />
+                    <Label Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="20" FontSize="12" Content="{Binding StringNachnameMitlaut04}" />
+                                                                                                                                         
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="16" FontSize="12" Content="{Binding StringNachnameMitlaut05}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="17" FontSize="12" Content="{Binding StringNachnameMitlaut06}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="18" FontSize="12" Content="{Binding StringNachnameMitlaut07}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="19" FontSize="12" Content="{Binding StringNachnameMitlaut08}" />
+                    <Label Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="20" FontSize="12" Content="{Binding StringNachnameMitlaut09}" />
+                                                                                                                                         
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="16" FontSize="12" Content="{Binding StringNachnameMitlaut10}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="17" FontSize="12" Content="{Binding StringNachnameMitlaut11}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="18" FontSize="12" Content="{Binding StringNachnameMitlaut12}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="19" FontSize="12" Content="{Binding StringNachnameMitlaut13}" />
+                    <Label Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="20" FontSize="12" Content="{Binding StringNachnameMitlaut14}" />
+                                                                                                                                         
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="16" FontSize="12" Content="{Binding StringNachnameMitlaut15}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="17" FontSize="12" Content="{Binding StringNachnameMitlaut16}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="18" FontSize="12" Content="{Binding StringNachnameMitlaut17}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="19" FontSize="12" Content="{Binding StringNachnameMitlaut18}" />
+                    <Label Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="20" FontSize="12" Content="{Binding StringNachnameMitlaut19}" />
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Geburtsdatum" >
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="0"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" FontSize="14" Content="Geboren am" />
+                    <Label Grid.Column="2" Grid.Row="2" FontSize="12" Content="Montag" />
+                    <Label Grid.Column="2" Grid.Row="3" FontSize="12" Content="Dienstag" />
+                    <Label Grid.Column="2" Grid.Row="4" FontSize="12" Content="Mittwoch" />
+                    <Label Grid.Column="2" Grid.Row="5" FontSize="12" Content="Donnerstag" />
+                    <Label Grid.Column="2" Grid.Row="6" FontSize="12" Content="Freitag" />
+                    <Label Grid.Column="2" Grid.Row="7" FontSize="12" Content="Samstag" />
+                    <Label Grid.Column="2" Grid.Row="8" FontSize="12" Content="Sonntag" />
+                    <Label Grid.Column="2" Grid.Row="9" FontSize="12" Content="Summe" />
+
+                    <Label Grid.Column="3" Grid.Row="2" FontSize="12" Content="{Binding StringMontag}" />
+                    <Label Grid.Column="3" Grid.Row="3" FontSize="12" Content="{Binding StringDienstag}" />
+                    <Label Grid.Column="3" Grid.Row="4" FontSize="12" Content="{Binding StringMittwoch}" />
+                    <Label Grid.Column="3" Grid.Row="5" FontSize="12" Content="{Binding StringDonnerstag}" />
+                    <Label Grid.Column="3" Grid.Row="6" FontSize="12" Content="{Binding StringFreitag}" />
+                    <Label Grid.Column="3" Grid.Row="7" FontSize="12" Content="{Binding StringSamstag}" />
+                    <Label Grid.Column="3" Grid.Row="8" FontSize="12" Content="{Binding StringSonntag}" />
+                    <Label Grid.Column="3" Grid.Row="9" FontSize="12" Content="{Binding StringWochentageSumme}" />
+
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="2" Fill="GreenYellow" Margin="{Binding ThicknessMontag}"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="3" Fill="GreenYellow" Margin="{Binding ThicknessDienstag}"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="4" Fill="GreenYellow" Margin="{Binding ThicknessMittwoch}"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="5" Fill="GreenYellow" Margin="{Binding ThicknessDonnerstag}"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="6" Fill="GreenYellow" Margin="{Binding ThicknessFreitag}"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="7" Fill="GreenYellow" Margin="{Binding ThicknessSamstag}"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="8" Fill="GreenYellow" Margin="{Binding ThicknessSonntag}"   />
+
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="2" Grid.RowSpan="7" Fill="Black" Margin="99,0,400,0"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="2" Grid.RowSpan="7" Fill="Black" Margin="199,0,300,0"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="2" Grid.RowSpan="7" Fill="Black" Margin="299,0,200,0"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="2" Grid.RowSpan="7" Fill="Black" Margin="399,0,100,0"   />
+
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="11" FontSize="14" Content="Geboren im" />
+                    <Label Grid.Column="2" Grid.Row="12" FontSize="12" Content="Jänner" />
+                    <Label Grid.Column="2" Grid.Row="13" FontSize="12" Content="Februar" />
+                    <Label Grid.Column="2" Grid.Row="14" FontSize="12" Content="März" />
+                    <Label Grid.Column="2" Grid.Row="15" FontSize="12" Content="April" />
+                    <Label Grid.Column="2" Grid.Row="16" FontSize="12" Content="Mai" />
+                    <Label Grid.Column="2" Grid.Row="17" FontSize="12" Content="Juni" />
+                    <Label Grid.Column="2" Grid.Row="18" FontSize="12" Content="Juli" />
+                    <Label Grid.Column="2" Grid.Row="19" FontSize="12" Content="August" />
+                    <Label Grid.Column="2" Grid.Row="20" FontSize="12" Content="September" />
+                    <Label Grid.Column="2" Grid.Row="21" FontSize="12" Content="Oktober" />
+                    <Label Grid.Column="2" Grid.Row="22" FontSize="12" Content="November" />
+                    <Label Grid.Column="2" Grid.Row="23" FontSize="12" Content="Dezember" />
+                    <Label Grid.Column="2" Grid.Row="24" FontSize="12" Content="Summe" />
+
+                    <Label Grid.Column="3" Grid.Row="12" FontSize="12" Content="{Binding StringJaenner}" />
+                    <Label Grid.Column="3" Grid.Row="13" FontSize="12" Content="{Binding StringFebruar}" />
+                    <Label Grid.Column="3" Grid.Row="14" FontSize="12" Content="{Binding StringMaerz}" />
+                    <Label Grid.Column="3" Grid.Row="15" FontSize="12" Content="{Binding StringApril}" />
+                    <Label Grid.Column="3" Grid.Row="16" FontSize="12" Content="{Binding StringMai}" />
+                    <Label Grid.Column="3" Grid.Row="17" FontSize="12" Content="{Binding StringJuni}" />
+                    <Label Grid.Column="3" Grid.Row="18" FontSize="12" Content="{Binding StringJuli}" />
+                    <Label Grid.Column="3" Grid.Row="19" FontSize="12" Content="{Binding StringAugust}" />
+                    <Label Grid.Column="3" Grid.Row="20" FontSize="12" Content="{Binding StringSeptember}" />
+                    <Label Grid.Column="3" Grid.Row="21" FontSize="12" Content="{Binding StringOktober}" />
+                    <Label Grid.Column="3" Grid.Row="22" FontSize="12" Content="{Binding StringNovember}" />
+                    <Label Grid.Column="3" Grid.Row="23" FontSize="12" Content="{Binding StringDezember}" />
+                    <Label Grid.Column="3" Grid.Row="24" FontSize="12" Content="{Binding StringMonateSumme}" />
+
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="12" Fill="Orange" Margin="{Binding ThicknessJaenner}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="13" Fill="Orange" Margin="{Binding ThicknessFebruar}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="14" Fill="Orange" Margin="{Binding ThicknessMaerz}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="15" Fill="Orange" Margin="{Binding ThicknessApril}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="16" Fill="Orange" Margin="{Binding ThicknessMai}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="17" Fill="Orange" Margin="{Binding ThicknessJuni}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="18" Fill="Orange" Margin="{Binding ThicknessJuli}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="19" Fill="Orange" Margin="{Binding ThicknessAugust}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="20" Fill="Orange" Margin="{Binding ThicknessSeptember}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="21" Fill="Orange" Margin="{Binding ThicknessOktober}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="22" Fill="Orange" Margin="{Binding ThicknessNovember}" />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="23" Fill="Orange" Margin="{Binding ThicknessDezember}" />
+
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="12" Grid.RowSpan="12" Fill="Black" Margin="99,0,400,0"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="12" Grid.RowSpan="12" Fill="Black" Margin="199,0,300,0"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="12" Grid.RowSpan="12" Fill="Black" Margin="299,0,200,0"   />
+                    <Rectangle Grid.Column="4" Grid.ColumnSpan="5" Grid.Row="12" Grid.RowSpan="12" Fill="Black" Margin="399,0,100,0"   />
+
+                    <Label Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="26" FontSize="14" Content="Häufigste Geburtstage" />
+
+                    <Label Grid.Column="2" Grid.Row="27" FontSize="12" Content="{Binding StringGeburtstag00}" />
+                    <Label Grid.Column="2" Grid.Row="28" FontSize="12" Content="{Binding StringGeburtstag01}" />
+                    <Label Grid.Column="2" Grid.Row="29" FontSize="12" Content="{Binding StringGeburtstag02}" />
+                    <Label Grid.Column="2" Grid.Row="30" FontSize="12" Content="{Binding StringGeburtstag03}" />
+                    <Label Grid.Column="2" Grid.Row="31" FontSize="12" Content="{Binding StringGeburtstag04}" />
+
+                    <Label Grid.Column="3" Grid.Row="27" FontSize="12" Content="{Binding StringGeburtstag05}" />
+                    <Label Grid.Column="3" Grid.Row="28" FontSize="12" Content="{Binding StringGeburtstag06}" />
+                    <Label Grid.Column="3" Grid.Row="29" FontSize="12" Content="{Binding StringGeburtstag07}" />
+                    <Label Grid.Column="3" Grid.Row="30" FontSize="12" Content="{Binding StringGeburtstag08}" />
+                    <Label Grid.Column="3" Grid.Row="31" FontSize="12" Content="{Binding StringGeburtstag09}" />
+
+                    <Label Grid.Column="4" Grid.Row="27" FontSize="12" Content="{Binding StringGeburtstag10}" />
+                    <Label Grid.Column="4" Grid.Row="28" FontSize="12" Content="{Binding StringGeburtstag11}" />
+                    <Label Grid.Column="4" Grid.Row="29" FontSize="12" Content="{Binding StringGeburtstag12}" />
+                    <Label Grid.Column="4" Grid.Row="30" FontSize="12" Content="{Binding StringGeburtstag13}" />
+                    <Label Grid.Column="4" Grid.Row="31" FontSize="12" Content="{Binding StringGeburtstag14}" />
+
+                    <Label Grid.Column="5" Grid.Row="27" FontSize="12" Content="{Binding StringGeburtstag15}" />
+                    <Label Grid.Column="5" Grid.Row="28" FontSize="12" Content="{Binding StringGeburtstag16}" />
+                    <Label Grid.Column="5" Grid.Row="29" FontSize="12" Content="{Binding StringGeburtstag17}" />
+                    <Label Grid.Column="5" Grid.Row="30" FontSize="12" Content="{Binding StringGeburtstag18}" />
+                    <Label Grid.Column="5" Grid.Row="31" FontSize="12" Content="{Binding StringGeburtstag19}" />
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
