@@ -11,7 +11,7 @@ public partial class MainWindow
         CancellationTokenSource = new CancellationTokenSource();
         Model = new Model.Model(this, CancellationTokenSource);
         ViewModel = new ViewModel.ViewModel(Model, CancellationTokenSource);
-        
+
         InitializeComponent();
         DataContext = ViewModel;
 
